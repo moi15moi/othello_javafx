@@ -12,6 +12,12 @@ repositories {
 
 dependencies {
 
+    compile project(':commun')
     compile project(':commun_javafx')
 
+}
+
+task(joueur01, dependsOn: 'classes', type: JavaExec) {
+   main = 'battleship_javafx.Principal'
+   classpath = sourceSets.main.runtimeClasspath
 }
