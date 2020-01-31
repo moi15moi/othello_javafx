@@ -1,0 +1,10 @@
+.Menu {
+	-fx-border-style: solid;
+	-fx-border-width: 10px;
+	-fx-border-color: blue;
+	-fx-background-color: red;
+}
+
+.conteneurBateaux {
+	-fx-background-color: green;
+}

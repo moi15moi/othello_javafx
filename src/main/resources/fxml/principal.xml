@@ -1,8 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
 <VBox xmlns:fx="http://javafx.com/fxml">
-	<Text text="Battleship"/>
+	<HBox styleClass="Menu">
+		<VBox>
+			<Text text="Partie locale"/>
+			<Text text="Nouvelle partie"/>
+		</VBox>
+		<VBox>
+			<Text text="Créer une partie"/>
+			<Text text="Joindre une partie"/>
+			<Text text="Quittez une partie"/>
+		</VBox>
+	</HBox>
+	
+	<HBox>
+		<VBox styleClass="conteneurGrille">
+			<HBox styleClass="conteneurLigne">
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+			</HBox>
+			<HBox styleClass="conteneurLigne">
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+			</HBox>
+			<HBox styleClass="conteneurLigne">
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+				<HBox styleClass="conteneurCase">
+					<ImageView styleClass="imageCase">
+					   <image>
+						   <Image url="/images/VIDE.png" />
+						</image>
+					</ImageView>
+				</HBox>
+			</HBox>
+		</VBox>
+		<VBox styleClass="conteneurBateaux">
+			<Text text="Bateaux"/>
+		</VBox>
+	</HBox>
 </VBox>

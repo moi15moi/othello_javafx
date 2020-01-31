@@ -1,5 +1,7 @@
 
-package battleship_javafx;
+package othello_javafx;
+
+import static othello_javafx.Constantes.*;
 
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
@@ -8,6 +10,7 @@ import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 
 public class Principal extends Application {
 
@@ -38,7 +41,7 @@ public class Principal extends Application {
 	private Scene creerScenePrincipale() {
 		J.appel(this);
 		
-		ChargeurDeVue chargeur = new ChargeurDeVue("/fxml/principal.xml");
+		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PARTIE_LOCALE_FXML, CHEMIN_CHAINES, CHEMIN_PARTIE_LOCALE_CSS);
 		
 		Scene scene = chargeur.nouvelleScene(600, 400);
 		
