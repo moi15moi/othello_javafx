@@ -41,7 +41,7 @@ public class Principal extends Application {
 	private Scene creerScenePrincipale() {
 		J.appel(this);
 		
-		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PARTIE_LOCALE_FXML, CHEMIN_CHAINES, CHEMIN_PARTIE_LOCALE_CSS);
+		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PARAMETRE_FXML, CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
 		
 		Scene scene = chargeur.nouvelleScene(600, 400);
 		

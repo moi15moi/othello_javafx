@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.MenuBar?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal">
+	<MenuBar>
+		<menus>
+			<Menu text="Menu">
+				<items>
+					<MenuItem fx:id="nouvellePartie" text="Nouvelle partie"/>
+					<MenuItem fx:id="parametres" text="Paramètres"/>
+				</items>
+			
+			</Menu>
+		</menus>
+	</MenuBar>
+	<HBox>
+		<Text text="Couleur des pièces " />
+		<ComboBox />
+	</HBox>
+	<HBox>
+		<Text text="Couleur du plateau de jeu " />
+		<ComboBox />
+	</HBox>
+	<HBox>
+		<Text text="Nom Joueur 01: " />
+		<TextField text="Joueur01"/>
+	</HBox>
+	<HBox>
+		<Text text="Nom Joueur 02: " />
+		<TextField text="Joueur02"/>
+	</HBox>
+	<HBox>
+		<Button text="Appliquer les changements"/>
+	</HBox>
+</VBox>

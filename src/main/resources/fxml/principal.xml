@@ -1,98 +1,521 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.control.ComboBox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.MenuBar?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal">
+	<MenuBar>
+		<menus>
+			<Menu text="Partie locale">
+				<items>
+					<MenuItem fx:id="nouvellePartie" text="Nouvelle partie"/>
+					<MenuItem fx:id="parametres" text="Paramètres"/>
+				</items>
+			
+			</Menu>
+		</menus>
+	</MenuBar>
+	
+	
+	
+	
 	<HBox styleClass="Menu">
 		<VBox>
-			<Text text="Partie locale"/>
-			<Text text="Nouvelle partie"/>
+			<Text text="Partie locale" />
+			<Text text="Nouvelle partie" />
 		</VBox>
 		<VBox>
-			<Text text="Créer une partie"/>
-			<Text text="Joindre une partie"/>
-			<Text text="Quittez une partie"/>
+			<Text text="Créer une partie" />
+			<Text text="Joindre une partie" />
+			<Circle radius="20" />
+			<ComboBox />
+			<Text text="Quittez une partie" />
 		</VBox>
 	</HBox>
+
+
+
+	<VBox styleClass="conteneurGrille">
+		<HBox styleClass="conteneurLigne">
+			<HBox styleClass="conteneurCase">
+				<Text styleClass="cercle" text="Q" />
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+		</HBox>
+		<HBox styleClass="conteneurLigne">
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+		</HBox>
+		<HBox styleClass="conteneurLigne">
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+		</HBox>
+		<HBox styleClass="conteneurLigne">
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+		</HBox>
+		<HBox styleClass="conteneurLigne">
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+		</HBox>
+		<HBox styleClass="conteneurLigne">
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+		</HBox>
+		<HBox styleClass="conteneurLigne">
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+		</HBox>
+		<HBox styleClass="conteneurLigne">
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+			<HBox styleClass="conteneurCase">
+				<ImageView styleClass="imageCase">
+					<image>
+						<Image url="/images/VIDE.png" />
+					</image>
+				</ImageView>
+			</HBox>
+		</HBox>
+	</VBox>
 	
-	<HBox>
-		<VBox styleClass="conteneurGrille">
-			<HBox styleClass="conteneurLigne">
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-			</HBox>
-			<HBox styleClass="conteneurLigne">
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-			</HBox>
-			<HBox styleClass="conteneurLigne">
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-				<HBox styleClass="conteneurCase">
-					<ImageView styleClass="imageCase">
-					   <image>
-						   <Image url="/images/VIDE.png" />
-						</image>
-					</ImageView>
-				</HBox>
-			</HBox>
-		</VBox>
-		<VBox styleClass="conteneurBateaux">
-			<Text text="Bateaux"/>
-		</VBox>
+	
+	
+	
+	<HBox styleClass="conteneurNomsJoueurs">
+		<HBox styleClass="conteneurNomJoueur">
+			<Text styleClass="nomJoueur" text="%joueurUn" />
+		</HBox>
+		<HBox styleClass="conteneurNomJoueur">
+			<Text styleClass="nomJoueur" text="%joueurDeux" />
+		</HBox>
 	</HBox>
 </VBox>
