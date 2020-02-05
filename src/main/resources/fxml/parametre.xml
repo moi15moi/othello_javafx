@@ -13,35 +13,38 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.MenuBar?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal">
-	<MenuBar>
+<VBox xmlns:fx="http://javafx.com/fxml" VBox.vgrow="ALWAYS">
+	<MenuBar styleClass="Menu">
 		<menus>
 			<Menu text="Menu">
 				<items>
 					<MenuItem fx:id="nouvellePartie" text="Nouvelle partie"/>
 					<MenuItem fx:id="parametres" text="Paramètres"/>
 				</items>
-			
+
 			</Menu>
 		</menus>
 	</MenuBar>
-	<HBox>
-		<Text text="Couleur des pièces " />
-		<ComboBox />
-	</HBox>
-	<HBox>
-		<Text text="Couleur du plateau de jeu " />
-		<ComboBox />
-	</HBox>
-	<HBox>
-		<Text text="Nom Joueur 01: " />
-		<TextField text="Joueur01"/>
-	</HBox>
-	<HBox>
-		<Text text="Nom Joueur 02: " />
-		<TextField text="Joueur02"/>
-	</HBox>
-	<HBox>
-		<Button text="Appliquer les changements"/>
-	</HBox>
+	<VBox styleClass="conteneurPrincipal" VBox.vgrow="ALWAYS">
+
+		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+			<Text styleClass="conteneurParametreTexte" Text="%Couleurdespieces"/>
+			<ComboBox />
+		</HBox>
+		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+			<Text styleClass="conteneurParametreTexte" Text="%Couleurduplateaudejeu"/>
+			<ComboBox />
+		</HBox>
+		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+			<Text styleClass="conteneurParametreTexte" Text="%NomJoueur01"/>
+			<TextField text="%joueurUn"/>
+		</HBox>
+		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+			<Text styleClass="conteneurParametreTexte" Text="%NomJoueur02"/>
+			<TextField text="%joueurDeux"/>
+		</HBox>
+		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+			<Button styleClass="conteneurParametreTexte" Text="%Appliquerleschangements"/>
+		</HBox>
+	</VBox>
 </VBox>

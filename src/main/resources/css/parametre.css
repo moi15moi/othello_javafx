@@ -1,3 +1,16 @@
-.conteneurPrincipal {
+.Menu {
 	-fx-background-color: gray;
+}
+
+.conteneurPrincipal {
+	-fx-background-color: #42f5b3;
+	-fx-padding:10px
+}
+
+.conteneurParametre{
+    -fx-max-height: 45px;
+}
+
+.conteneurParametreTexte{
+    -fx-underline: true;
 }
