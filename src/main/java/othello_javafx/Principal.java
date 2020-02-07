@@ -1,4 +1,3 @@
-
 package othello_javafx;
 
 import static othello_javafx.Constantes.*;
@@ -10,6 +9,7 @@ import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 
 
 public class Principal extends Application {

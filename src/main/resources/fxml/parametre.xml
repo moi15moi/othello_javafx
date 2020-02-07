@@ -13,6 +13,9 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.MenuBar?>
 
+<?import othello_javafx.vues.composants.CaseAjustable?>
+
+
 <VBox xmlns:fx="http://javafx.com/fxml" VBox.vgrow="ALWAYS">
 	<MenuBar styleClass="Menu">
 		<menus>
@@ -46,5 +49,6 @@
 		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
 			<Button styleClass="conteneurParametreTexte" Text="%Appliquerleschangements"/>
 		</HBox>
+		<CaseAjustable url="/images/VIDE.png" VBox.vgrow="ALWAYS"/>
 	</VBox>
 </VBox>
