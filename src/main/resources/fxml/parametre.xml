@@ -21,8 +21,8 @@
 		<menus>
 			<Menu text="Menu">
 				<items>
-					<MenuItem fx:id="nouvellePartie" text="Nouvelle partie"/>
-					<MenuItem fx:id="parametres" text="Paramètres"/>
+					<MenuItem fx:id="nouvellePartie" text="%nouvellePartie"/>
+					<MenuItem fx:id="parametres" text="%parametres"/>
 				</items>
 
 			</Menu>
