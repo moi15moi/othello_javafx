@@ -28,27 +28,54 @@
 			</Menu>
 		</menus>
 	</MenuBar>
+
+
+
 	<VBox styleClass="conteneurPrincipal" VBox.vgrow="ALWAYS">
 
-		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-			<Text styleClass="conteneurParametreTexte" Text="%Couleurdespieces"/>
-			<ComboBox />
-		</HBox>
-		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-			<Text styleClass="conteneurParametreTexte" Text="%Couleurduplateaudejeu"/>
-			<ComboBox />
-		</HBox>
-		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-			<Text styleClass="conteneurParametreTexte" Text="%NomJoueur01"/>
-			<TextField text="%joueurUn"/>
-		</HBox>
-		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-			<Text styleClass="conteneurParametreTexte" Text="%NomJoueur02"/>
-			<TextField text="%joueurDeux"/>
-		</HBox>
-		<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-			<Button styleClass="conteneurParametreTexte" Text="%Appliquerleschangements"/>
-		</HBox>
-		<CaseAjustable url="/images/VIDE.png" VBox.vgrow="ALWAYS"/>
+		<VBox styleClass="conteneurParametres">
+
+			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">
+					<Text styleClass="conteneurParametreTexte" Text="%Couleurdespieces"/>
+				</HBox >
+				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">
+					<ComboBox styleClass="combobox" id="couleurPiece" HBox.hgrow="ALWAYS"/>
+				</HBox>
+			</HBox>
+
+			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">
+					<Text styleClass="conteneurParametreTexte" Text="%Couleurduplateaudejeu"/>
+				</HBox >	
+				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">
+					<ComboBox styleClass="combobox" id="couleurPlateau"/>
+				</HBox >	
+			</HBox>
+
+			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">
+					<Text styleClass="conteneurParametreTexte" Text="%NomJoueur01"/>
+				</HBox >
+				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">				
+					<TextField styleClass="combobox" text="%joueurUn"/>
+				</HBox>
+			</HBox>
+
+			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">
+					<Text styleClass="conteneurParametreTexte" Text="%NomJoueur02"/>
+				</HBox >
+				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">		
+					<TextField styleClass="combobox" text="%joueurDeux"/>
+				</HBox >
+			</HBox>
+
+			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+				<Button styleClass="conteneurParametreTexte" Text="%Appliquerleschangements"/>
+			</HBox>
+		</VBox>
+
 	</VBox>
+
 </VBox>

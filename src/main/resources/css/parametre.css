@@ -4,13 +4,40 @@
 
 .conteneurPrincipal {
 	-fx-background-color: #42f5b3;
-	-fx-padding:10px
+}
+
+.conteneurParametres{
+	-fx-alignment: center;
+	-fx-padding: 2em;
+	-fx-background-color: red;
 }
 
 .conteneurParametre{
-    -fx-max-height: 45px;
+    -fx-min-height: 45px;
+	-fx-max-width: 500px;
+	-fx-alignment: center;
+	-fx-border-style: solid solid solid solid;
+	-fx-border-width: 2px;
+}
+
+.conteneurQuestion{
+	-fx-alignment: top-left;
+	-fx-border-style: solid solid solid solid;
+
+	-fx-border-width: 2px;
+}
+
+.conteneurReponse{
+	-fx-alignment: top-right;
+	-fx-border-style: solid solid solid solid;
+
+	-fx-border-width: 2px;
 }
 
 .conteneurParametreTexte{
     -fx-underline: true;
+}
+
+.combobox{
+	 -fx-pref-width: 150px;
 }

@@ -8,6 +8,7 @@ import commun_javafx.ChargeurDeVue;
 import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
 
@@ -41,11 +42,21 @@ public class Principal extends Application {
 	private Scene creerScenePrincipale() {
 		J.appel(this);
 		
-		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PARTIE_LOCALE_FXML, CHEMIN_CHAINES, CHEMIN_PARTIE_LOCALE_CSS);
+		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PARAMETRE_FXML, CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
+		
+		//À ajouter dans le futur fichier parametre
 		
 		Scene scene = chargeur.nouvelleScene(600, 400);
 		
-		DoitEtre.nonNul(scene);
+		ComboBox combo = (ComboBox) scene.lookup("#couleurPiece");
+		
+		combo.getItems().addAll("Noir/Blanc", "Noir/Rouge", "Noir/Bleu", "Blanc/Rouge", "Blanc/Bleu");
+		
+		combo = (ComboBox) scene.lookup("#couleurPlateau");
+		
+		combo.getItems().addAll("Blanc", "Noir", "Bleu", "Rouge", "Bleu", "Vert");
+		
+ 		DoitEtre.nonNul(scene);
 		
 		return scene;
 	}

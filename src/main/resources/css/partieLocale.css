@@ -11,7 +11,7 @@
 
 .conteneurGrille {
 	-fx-alignment: center;
-	-fx-background-color: red;
+	-fx-padding: 10em;
 }
 
 .conteneurLigne {
@@ -21,6 +21,9 @@
 }
 
 .conteneurCase {
+	-fx-border-style: solid solid solid solid;
+
+	-fx-border-width: 2px;
 	-fx-alignment: center;
 }
 

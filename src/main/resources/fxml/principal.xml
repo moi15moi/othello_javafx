@@ -23,7 +23,7 @@
 					<MenuItem fx:id="parametres" text="%parametres"/>
 				</items>
 			</Menu>
-			<Menu text="Jouez en ligne">
+			<Menu text="Jouer en ligne">
 				<items>
 					<MenuItem fx:id="creerUnePartie" text="%creerUnePartie"/>
 					<MenuItem fx:id="joindreUnePartie" text="%joindreUnePartie"/>
@@ -37,71 +37,71 @@
 
 	<VBox styleClass="conteneurGrille" VBox.vgrow="ALWAYS">
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
 		</HBox>
 	</VBox>
 
 
 
 
-	<HBox styleClass="conteneurNomsJoueurs">
-		<HBox styleClass="conteneurNomJoueur">
+	<HBox styleClass="conteneurNomsJoueurs" VBox.vgrow="ALWAYS">
+		<HBox styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
 			<Text styleClass="nomJoueur" text="%joueurUn" />
 		</HBox>
-		<HBox styleClass="conteneurNomJoueur">
+		<HBox styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
 			<Text styleClass="nomJoueur" text="%joueurDeux" />
 		</HBox>
 	</HBox>

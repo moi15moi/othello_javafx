@@ -20,6 +20,7 @@ public class CaseAjustable extends ImageAjustable {
 	public CaseAjustable(@NamedArg("url") String url) {
         super(url);
         J.appel(this);
+        
 
         creerAnimation();
 
@@ -28,6 +29,15 @@ public class CaseAjustable extends ImageAjustable {
 
     }
 	
+	
+	@Override
+	protected void setScaleXY(double facteurTaille) {
+		J.appel(this);
+		
+		this.imageView.setScaleX(0.8 * facteurTaille);
+		this.imageView.setScaleY(0.8 * facteurTaille);
+
+	}
 	private void installerListeners() {
         J.appel(this);
         
