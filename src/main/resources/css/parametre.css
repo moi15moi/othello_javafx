@@ -1,5 +1,5 @@
 .Menu {
-	-fx-background-color: gray;
+	-fx-background-color: white;
 }
 
 .conteneurPrincipal {
@@ -7,31 +7,23 @@
 }
 
 .conteneurParametres{
-	-fx-alignment: center;
 	-fx-padding: 2em;
-	-fx-background-color: red;
+	-fx-background-color: #42f5c8;
 }
 
 .conteneurParametre{
-    -fx-min-height: 45px;
-	-fx-max-width: 500px;
-	-fx-alignment: center;
-	-fx-border-style: solid solid solid solid;
-	-fx-border-width: 2px;
+    -fx-min-height: 4em;
+	-fx-max-height: 7em;
+	-fx-max-width: 40em;
 }
 
 .conteneurQuestion{
 	-fx-alignment: top-left;
-	-fx-border-style: solid solid solid solid;
-
-	-fx-border-width: 2px;
+	-fx-min-width: 14em;
 }
 
 .conteneurReponse{
 	-fx-alignment: top-right;
-	-fx-border-style: solid solid solid solid;
-
-	-fx-border-width: 2px;
 }
 
 .conteneurParametreTexte{
@@ -39,5 +31,5 @@
 }
 
 .combobox{
-	 -fx-pref-width: 150px;
+	 -fx-pref-width: 15em;
 }

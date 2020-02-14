@@ -33,10 +33,35 @@ public class Principal extends Application {
 		
 		Scene scene= creerScenePrincipale();
 		
+		afficherFenetre(fenetrePrincipale, scene);
+		
+	}
+	
+	private void afficherFenetre(Stage fenetrePrincipale, Scene scene) {
+		J.appel(this);
+
+
 		fenetrePrincipale.setScene(scene);
 		
-		fenetrePrincipale.show();
+		setLargeurFenetre(fenetrePrincipale, scene.getWidth());
+		setHauteurFenetre(fenetrePrincipale, scene.getHeight());
 		
+		fenetrePrincipale.show();
+
+	}
+
+	private void setHauteurFenetre(Stage fenetrePrincipale, double hauteur) {
+		J.appel(this);
+		
+		fenetrePrincipale.setHeight(hauteur);
+		fenetrePrincipale.setMinHeight(hauteur);
+	}
+
+	private void setLargeurFenetre(Stage fenetrePrincipale, double largeur) {
+		J.appel(this);
+		
+		fenetrePrincipale.setWidth(largeur);
+		fenetrePrincipale.setMinWidth(largeur);
 	}
 	
 	private Scene creerScenePrincipale() {
