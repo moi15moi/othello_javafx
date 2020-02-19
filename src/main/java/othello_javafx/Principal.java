@@ -67,19 +67,19 @@ public class Principal extends Application {
 	private Scene creerScenePrincipale() {
 		J.appel(this);
 		
-		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PARAMETRE_FXML, CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
+		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PRINCIPAL_FXML, CHEMIN_CHAINES, CHEMIN_PRINCIPAL_CSS);
 		
 		//À ajouter dans le futur fichier parametre
 		
 		Scene scene = chargeur.nouvelleScene(600, 400);
 		
-		ComboBox combo = (ComboBox) scene.lookup("#couleurPiece");
+		//ComboBox combo = (ComboBox) scene.lookup("#couleurPiece");
 		
-		combo.getItems().addAll("Noir/Blanc", "Noir/Rouge", "Noir/Bleu", "Blanc/Rouge", "Blanc/Bleu");
+		//combo.getItems().addAll("Noir/Blanc", "Noir/Rouge", "Noir/Bleu", "Blanc/Rouge", "Blanc/Bleu");
 		
-		combo = (ComboBox) scene.lookup("#couleurPlateau");
+		//combo = (ComboBox) scene.lookup("#couleurPlateau");
 		
-		combo.getItems().addAll("Blanc", "Noir", "Bleu", "Rouge", "Bleu", "Vert");
+		//combo.getItems().addAll("Blanc", "Noir", "Bleu", "Rouge", "Bleu", "Vert");
 		
  		DoitEtre.nonNul(scene);
 		

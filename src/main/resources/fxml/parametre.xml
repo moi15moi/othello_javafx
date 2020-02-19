@@ -16,7 +16,6 @@
 <?import othello_javafx.vues.composants.CaseAjustable?>
 <?import othello_javafx.vues.composants.ButtonPersonnalise?>
 
-
 <VBox xmlns:fx="http://javafx.com/fxml" VBox.vgrow="ALWAYS">
 	<MenuBar styleClass="Menu">
 		<menus>
