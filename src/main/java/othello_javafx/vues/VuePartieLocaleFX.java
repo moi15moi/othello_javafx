@@ -1,0 +1,41 @@
+package othello_javafx.vues;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import commun.debogage.DoitEtre;
+import commun.debogage.J;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import othello_client.vues.VuePartieLocale;
+import othello_javafx.vues.composants.ConteneurEntetes;
+import othello_javafx.vues.composants.ConteneurGrille;
+
+public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
+
+	@FXML
+	private ConteneurEntetes conteneurEntetes;
+
+	@FXML
+	private ConteneurGrille conteneurGrille;
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		J.appel(this);
+
+		DoitEtre.nonNul(conteneurEntetes);
+		DoitEtre.nonNul(conteneurGrille);
+	}
+
+	@Override
+	public void creerGrille(int largeur, int hauteur) {
+		J.appel(this);
+	    
+	    conteneurEntetes.creerEntetes(largeur);
+	    
+	    conteneurGrille.creerGrille(largeur, hauteur);
+
+		
+	}
+
+}

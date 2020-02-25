@@ -38,60 +38,60 @@
 
 	<VBox styleClass="conteneurGrille" VBox.vgrow="ALWAYS">
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CerclePersonnalise radius="22" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
-			<CaseAjustable styleClass="conteneurCase" url="/images/VIDE.png" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
+			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
 		</HBox>
 	</VBox>
 

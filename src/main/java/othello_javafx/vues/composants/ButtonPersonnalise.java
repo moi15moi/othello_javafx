@@ -1,5 +1,8 @@
 package othello_javafx.vues.composants;
 
+import java.awt.Color;
+import java.util.Random;
+
 import commun.debogage.J;
 import javafx.animation.*;
 import javafx.animation.KeyValue;
@@ -24,17 +27,19 @@ public class ButtonPersonnalise extends Button {
 
 		installerListeners();
 		animationClick.setCycleCount(-1);
+		this.setRandomColor();
 	}
 
 	private void installerListeners() {
 		J.appel(this);
-		
+
 		this.setOnMouseEntered(new EventHandler<Event>() {
 
 			@Override
 			public void handle(Event event) {
 				J.appel(this);
 				animationClick.playFromStart();
+
 			}
 		});
 
@@ -44,10 +49,32 @@ public class ButtonPersonnalise extends Button {
 				J.appel(this);
 
 				animationClick.stop();
-				ButtonPersonnalise.this.opacityProperty().set(1);;
-				
+				ButtonPersonnalise.this.opacityProperty().set(1);
 			}
 		});
+		
+		this.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				ButtonPersonnalise.this.setRandomColor();
+			}
+		});
+	}
+
+
+
+	private void setRandomColor() {
+		Random rand = new Random();
+
+		float r = rand.nextFloat();
+		float g = rand.nextFloat();
+		float b = rand.nextFloat();
+
+		Color randomColor = new Color(r, g, b);
+
+		this.setStyle("-fx-background-color: rgb(" + randomColor.getRed() + ", " + randomColor.getGreen() + ", "
+				+ randomColor.getBlue() + ")");
+
 	}
 
 	private void creerAnimation() {

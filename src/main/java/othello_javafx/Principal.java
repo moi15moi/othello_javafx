@@ -1,6 +1,5 @@
 package othello_javafx;
 
-import static othello_javafx.Constantes.*;
 
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
@@ -8,10 +7,9 @@ import commun_javafx.ChargeurDeVue;
 import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-
+import static othello_javafx.Constantes.*;
 
 public class Principal extends Application {
 
@@ -67,7 +65,7 @@ public class Principal extends Application {
 	private Scene creerScenePrincipale() {
 		J.appel(this);
 		
-		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PRINCIPAL_FXML, CHEMIN_CHAINES, CHEMIN_PRINCIPAL_CSS);
+		ChargeurDeVue chargeur = new ChargeurDeVue(CHEMIN_PARAMETRE_FXML, CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
 		
 		//À ajouter dans le futur fichier parametre
 		

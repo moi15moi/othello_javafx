@@ -30,18 +30,11 @@ public class CaseAjustable extends ImageAjustable {
     }
 	
 	
-	@Override
-	protected void setScaleXY(double facteurTaille) {
-		J.appel(this);
-		
-		this.imageView.setScaleX(0.8 * facteurTaille);
-		this.imageView.setScaleY(0.8 * facteurTaille);
 
-	}
 	private void installerListeners() {
         J.appel(this);
         
-        this.imageView.setOnMouseEntered(new EventHandler<Event>() {
+        this.setOnMouseEntered(new EventHandler<Event>() {
             @Override
             public void handle(Event event) {
                 J.appel(this);
@@ -50,7 +43,7 @@ public class CaseAjustable extends ImageAjustable {
             }
         });
 
-        this.imageView.setOnMouseExited(new EventHandler<Event>() {
+        this.setOnMouseExited(new EventHandler<Event>() {
             @Override
             public void handle(Event event) {
                 J.appel(this);

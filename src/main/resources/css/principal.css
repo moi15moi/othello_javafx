@@ -11,7 +11,7 @@
 
 .conteneurGrille {
 	-fx-alignment: center;
-	-fx-padding: 10em;
+	/*-fx-padding: 20px;*/
 }
 
 .conteneurLigne {
@@ -22,9 +22,10 @@
 
 .conteneurCase {
 	-fx-border-style: solid solid solid solid;
-
-	-fx-border-width: 2px;
+	
+	-fx-border-width: 30px;
 	-fx-alignment: center;
+	-fx-background-color: red;
 }
 
 .conteneurNomsJoueurs {
