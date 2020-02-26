@@ -1,5 +1,6 @@
 package othello.modeles.PartieLocale;
 
+import java.awt.Color;
 import java.util.Random;
 
 import commun.debogage.J;
@@ -27,5 +28,18 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 	public int getHauteur() {
 	    J.appel(this);
 	    return hauteur;
+	}
+
+	@Override
+	public Color getCouleur() {
+		
+		Random rand = new Random();
+		int r = rand.nextInt(255);
+		int g = rand.nextInt(255);
+		int b = rand.nextInt(255);
+		
+		Color couleur = new Color(r,g,b);
+		
+		return couleur;
 	}
 }

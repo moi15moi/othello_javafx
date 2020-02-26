@@ -16,7 +16,7 @@
 <?import othello_javafx.vues.composants.CaseAjustable?>
 <?import othello_javafx.vues.composants.ButtonPersonnalise?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" VBox.vgrow="ALWAYS">
+<VBox xmlns:fx="http://javafx.com/fxml" VBox.vgrow="ALWAYS" fx:controller="othello_javafx.vues.VuePartieLocaleFX">
 	<MenuBar styleClass="Menu">
 		<menus>
 			<Menu text="Menu">
@@ -50,6 +50,15 @@
 				</HBox >	
 				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">
 					<ComboBox styleClass="combobox" id="couleurPlateau"/>
+				</HBox >	
+			</HBox>
+			
+			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
+				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">
+					<Text styleClass="conteneurParametreTexte" Text="%CouleurFondEcran"/>
+				</HBox >	
+				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">
+					<ComboBox styleClass="combobox" id="couleurFondEcran"/>
 				</HBox >	
 			</HBox>
 

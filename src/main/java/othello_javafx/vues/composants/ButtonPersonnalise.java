@@ -27,7 +27,6 @@ public class ButtonPersonnalise extends Button {
 
 		installerListeners();
 		animationClick.setCycleCount(-1);
-		this.setRandomColor();
 	}
 
 	private void installerListeners() {
@@ -56,24 +55,17 @@ public class ButtonPersonnalise extends Button {
 		this.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				ButtonPersonnalise.this.setRandomColor();
+				//ButtonPersonnalise.this.setRandomColor();
 			}
 		});
 	}
 
 
 
-	private void setRandomColor() {
-		Random rand = new Random();
+	public void afficherCouleur(Color couleur) {
 
-		float r = rand.nextFloat();
-		float g = rand.nextFloat();
-		float b = rand.nextFloat();
-
-		Color randomColor = new Color(r, g, b);
-
-		this.setStyle("-fx-background-color: rgb(" + randomColor.getRed() + ", " + randomColor.getGreen() + ", "
-				+ randomColor.getBlue() + ")");
+		this.setStyle("-fx-background-color: rgb(" + couleur.getRed() + ", " + couleur.getGreen() + ", "
+				+ couleur.getBlue() + ")");
 
 	}
 

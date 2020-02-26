@@ -1,5 +1,7 @@
 package othello.modeles.PartieLocale;
 
+import java.awt.Color;
+
 import commun.modeles.*;
 
 public interface PartieLocaleLectureSeule extends ModeleLectureSeule {
@@ -9,4 +11,8 @@ public interface PartieLocaleLectureSeule extends ModeleLectureSeule {
 	int getLargeur();
 
 	int getHauteur();
+
+	Color getCouleur();
+	
+	
 }

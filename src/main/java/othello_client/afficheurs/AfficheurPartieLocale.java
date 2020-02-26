@@ -1,5 +1,7 @@
 package othello_client.afficheurs;
 
+import java.awt.Color;
+
 import commun.debogage.J;
 import commun_client.mvc.Afficheur;
 import othello.modeles.PartieLocale.PartieLocaleLectureSeule;
@@ -15,7 +17,9 @@ public abstract class AfficheurPartieLocale <V extends VuePartieLocale> extends 
 		int largeur = modeleLectureSeule.getLargeur();
 		int hauteur = modeleLectureSeule.getHauteur();
 		
-		vue.creerGrille(largeur, hauteur);
+		//Couleur Button personnalisé
+		Color couleur = modeleLectureSeule.getCouleur();
+		vue.afficherCouleur(couleur);
 		
 	}
 }
