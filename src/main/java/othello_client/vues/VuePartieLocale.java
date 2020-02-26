@@ -5,7 +5,6 @@ import javafx.fxml.Initializable;
 import java.awt.Color;
 
 public interface VuePartieLocale extends Vue{
-	void creerGrille(int largeur, int hauteur);
 	
 	void afficherCouleur(Color couleur);
 	

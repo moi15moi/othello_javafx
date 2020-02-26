@@ -81,7 +81,7 @@
 			</HBox>
 
 			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-				<ButtonPersonnalise styleClass="conteneurParametreTexte" Text="%Appliquerleschangements"/>
+				<ButtonPersonnalise fx:id="buttonPersonnalise" styleClass="conteneurParametreTexte" Text="%Appliquerleschangements"/>
 			</HBox>
 		</VBox>
 

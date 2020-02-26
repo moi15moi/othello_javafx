@@ -19,11 +19,6 @@ import othello_javafx.vues.composants.ConteneurGrille;
 
 public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
-	@FXML
-	private ConteneurEntetes conteneurEntetes;
-
-	@FXML
-	private ConteneurGrille conteneurGrille;
 	
 	@FXML
 	private ButtonPersonnalise buttonPersonnalise;
@@ -32,19 +27,8 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		J.appel(this);
 
-		DoitEtre.nonNul(conteneurEntetes);
-		DoitEtre.nonNul(conteneurGrille);
-	}
 
-	@Override
-	public void creerGrille(int largeur, int hauteur) {
-		J.appel(this);
-	    
-	    conteneurEntetes.creerEntetes(largeur);
-	    
-	    conteneurGrille.creerGrille(largeur, hauteur);
-
-		
+		DoitEtre.nonNul(buttonPersonnalise);
 	}
 
 	@Override
