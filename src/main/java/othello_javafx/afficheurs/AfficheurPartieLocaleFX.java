@@ -7,6 +7,12 @@ import othello_javafx.vues.VuePartieLocaleFX;
 
 public class AfficheurPartieLocaleFX extends AfficheurPartieLocale<VuePartieLocaleFX>{
 
+	@Override
+	public void rafraichirAffichage(PartieLocaleLectureSeule modeleLectureSeule, VuePartieLocaleFX vue) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 }

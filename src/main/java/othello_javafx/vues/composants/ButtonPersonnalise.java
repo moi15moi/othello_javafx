@@ -1,22 +1,22 @@
 package othello_javafx.vues.composants;
 
 import java.awt.Color;
-import java.util.Random;
 
 import commun.debogage.J;
+import commun_client.commandes.FabriqueCommande;
 import javafx.animation.*;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.beans.NamedArg;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.*;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
+import othello_javafx.commandes.Cliquer.Cliquer;
+import othello_javafx.commandes.Cliquer.CliquerPourEnvoi;
 
 public class ButtonPersonnalise extends Button {
 
+	private CliquerPourEnvoi cliquerPourEnvoi;
+	
 	private Timeline animationClick = new Timeline();
 
 	public ButtonPersonnalise() {
@@ -25,11 +25,11 @@ public class ButtonPersonnalise extends Button {
 
 		creerAnimation();
 
-		installerListeners();
+		
 		animationClick.setCycleCount(-1);
 	}
 
-	private void installerListeners() {
+	public void installerListeners() {
 		J.appel(this);
 
 		this.setOnMouseEntered(new EventHandler<Event>() {
@@ -49,13 +49,6 @@ public class ButtonPersonnalise extends Button {
 
 				animationClick.stop();
 				ButtonPersonnalise.this.opacityProperty().set(1);
-			}
-		});
-		
-		this.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				//ButtonPersonnalise.this.setRandomColor();
 			}
 		});
 	}
@@ -83,5 +76,29 @@ public class ButtonPersonnalise extends Button {
 
 		animationClick.getKeyFrames().add(
 				new KeyFrame(new Duration(delaiMilisecondes * 2), new KeyValue(opacityProperty(), opaciteNormale)));
+	}
+
+	public void installerCapteursCliquer() {
+		J.appel(this);
+		
+		this.setOnAction(new EventHandler<ActionEvent>() {
+			
+			@Override
+			public void handle(ActionEvent event) {
+				J.appel(this);
+				
+				
+				//TODO
+				cliquerPourEnvoi.setCouleurFondEcran(Color.GRAY);
+			}
+		});
+		
+	}
+
+	public void obtenirCliquerPourEnvoi() {
+		J.appel(this);
+		
+		cliquerPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(Cliquer.class);
+		
 	}
 }
