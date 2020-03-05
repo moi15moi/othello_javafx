@@ -17,7 +17,7 @@
 <?import othello_javafx.vues.composants.ButtonPersonnalise?>
 <?import othello_javafx.vues.composants.Textbox?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" VBox.vgrow="ALWAYS" fx:controller="othello_javafx.vues.VuePartieLocaleFX" id="principal">
+<VBox xmlns:fx="http://javafx.com/fxml" VBox.vgrow="ALWAYS" fx:controller="othello_javafx.vues.VueParametreFX">
 	<MenuBar styleClass="Menu">
 		<menus>
 			<Menu text="Menu">
@@ -32,7 +32,7 @@
 
 
 
-	<VBox styleClass="conteneurPrincipal" VBox.vgrow="ALWAYS">
+	<VBox styleClass="conteneurPrincipal" VBox.vgrow="ALWAYS" fx:id="conteneurPrincipal">
 
 		<VBox styleClass="conteneurParametres" VBox.vgrow="ALWAYS">
 
@@ -50,7 +50,7 @@
 					<Text styleClass="conteneurParametreTexte" Text="%Couleurduplateaudejeu"/>
 				</HBox >	
 				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">
-					<Textbox styleClass="combobox" id="couleurPlateau"/>
+					<TextField styleClass="combobox" fx:id="couleurPlateau"/>
 				</HBox >	
 			</HBox>
 			
@@ -59,7 +59,7 @@
 					<Text styleClass="conteneurParametreTexte" Text="%CouleurFondEcran"/>
 				</HBox >	
 				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">
-					<TextField styleClass="combobox" id="couleurFondEcran"/>
+					<Textbox styleClass="combobox" fx:id="couleurFondEcran"/>
 				</HBox >	
 			</HBox>
 

@@ -1,6 +1,6 @@
 package othello_javafx.commandes.Cliquer;
 
-import java.awt.Color;
+import javafx.scene.paint.Color;
 
 import commun_client.commandes.CommandePourEnvoi;
 

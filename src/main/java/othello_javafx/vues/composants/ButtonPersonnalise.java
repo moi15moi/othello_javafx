@@ -15,8 +15,6 @@ import othello_javafx.commandes.Cliquer.CliquerPourEnvoi;
 
 public class ButtonPersonnalise extends Button {
 
-	private CliquerPourEnvoi cliquerPourEnvoi;
-	
 	private Timeline animationClick = new Timeline();
 
 	public ButtonPersonnalise() {
@@ -25,11 +23,10 @@ public class ButtonPersonnalise extends Button {
 
 		creerAnimation();
 
-		
 		animationClick.setCycleCount(-1);
 	}
 
-	public void installerListeners() {
+	public void installerListenersPourAnimation() {
 		J.appel(this);
 
 		this.setOnMouseEntered(new EventHandler<Event>() {
@@ -53,15 +50,6 @@ public class ButtonPersonnalise extends Button {
 		});
 	}
 
-
-
-	public void afficherCouleur(Color couleur) {
-
-		this.setStyle("-fx-background-color: rgb(" + couleur.getRed() + ", " + couleur.getGreen() + ", "
-				+ couleur.getBlue() + ")");
-
-	}
-
 	private void creerAnimation() {
 		J.appel(this);
 
@@ -80,25 +68,11 @@ public class ButtonPersonnalise extends Button {
 
 	public void installerCapteursCliquer() {
 		J.appel(this);
-		
-		this.setOnAction(new EventHandler<ActionEvent>() {
-			
-			@Override
-			public void handle(ActionEvent event) {
-				J.appel(this);
-				
-				
-				//TODO
-				cliquerPourEnvoi.setCouleurFondEcran(Color.GRAY);
-			}
-		});
-		
+
 	}
 
 	public void obtenirCliquerPourEnvoi() {
 		J.appel(this);
-		
-		cliquerPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(Cliquer.class);
-		
+
 	}
 }

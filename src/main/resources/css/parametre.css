@@ -3,12 +3,11 @@
 }
 
 .conteneurPrincipal {
-	-fx-background-color: #42f5b3;
+	
 }
 
 .conteneurParametres{
 	-fx-padding: 2em;
-	-fx-background-color: #42f5c8;
 }
 
 .conteneurParametre{

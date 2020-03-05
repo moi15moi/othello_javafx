@@ -8,11 +8,11 @@ import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import othello.modeles.PartieLocale.PartieLocale;
-import othello_client.vues.VuePartieLocale;
-import othello_javafx.afficheurs.AfficheurPartieLocaleFX;
-import othello_javafx.controleurs.ControleurPartieLocaleFX;
-import othello_javafx.vues.VuePartieLocaleFX;
+import othello.modeles.Parametre.Parametre;
+import othello_client.vues.VueParametre;
+import othello_javafx.afficheurs.AfficheurParametreFX;
+import othello_javafx.controleurs.ControleurParametreFX;
+import othello_javafx.vues.VueParametreFX;
 
 import static othello_javafx.Constantes.*;
 
@@ -37,7 +37,7 @@ public class Principal extends Application {
 		Scene scene = creerScenePrincipale();
 
 		afficherFenetre(fenetrePrincipale, scene);
-
+		
 	}
 
 	private void afficherFenetre(Stage fenetrePrincipale, Scene scene) {
@@ -69,17 +69,17 @@ public class Principal extends Application {
 	private Scene creerScenePrincipale() {
 		J.appel(this);
 
-		ChargeurDeVue<VuePartieLocaleFX> chargeur = new ChargeurDeVue<VuePartieLocaleFX>(CHEMIN_PARAMETRE_FXML, CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
+		ChargeurDeVue<VueParametreFX> chargeur = new ChargeurDeVue<VueParametreFX>(CHEMIN_PARAMETRE_FXML, CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
 
-		VuePartieLocale vue = chargeur.getVue();
+		VueParametre vue = chargeur.getVue();
 
 		DoitEtre.nonNul(vue);
 
-		PartieLocale partie = new PartieLocale();
+		Parametre partie = new Parametre();
 
-		AfficheurPartieLocaleFX afficheur = new AfficheurPartieLocaleFX();
+		AfficheurParametreFX afficheur = new AfficheurParametreFX();
 
-		FabriqueControleur.creerControleur(ControleurPartieLocaleFX.class, partie, vue, afficheur);
+		FabriqueControleur.creerControleur(ControleurParametreFX.class, partie, vue, afficheur);
 
 		// À ajouter dans le futur fichier parametre
 
