@@ -1,109 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.control.ComboBox?>
 
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.MenuBar?>
-
-<?import othello_javafx.vues.composants.CaseAjustable?>
-<?import othello_javafx.vues.composants.CerclePersonnalise?>
-
-<VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal">
-	<MenuBar>
-		<menus>
-			<Menu text="Partie locale">
-				<items>
-					<MenuItem fx:id="nouvellePartie" text="%nouvellePartie"/>
-					<MenuItem fx:id="parametres" text="%parametres"/>
-				</items>
-			</Menu>
-			<Menu text="Jouer en ligne">
-				<items>
-					<MenuItem fx:id="creerUnePartie" text="%creerUnePartie"/>
-					<MenuItem fx:id="joindreUnePartie" text="%joindreUnePartie"/>
-					<MenuItem fx:id="quittezUnePartie" text="%quittezUnePartie"/>
-				</items>
-			</Menu>
-		</menus>
-	</MenuBar>
-	
-
-
-	<VBox styleClass="conteneurGrille" VBox.vgrow="ALWAYS">
-		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-		</HBox>
-		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-		</HBox>
-		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-		</HBox>
-		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-		</HBox>
-		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-		</HBox>
-		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-		</HBox>
-		<HBox styleClass="conteneurLigne" VBox.vgrow="ALWAYS">
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-			<CerclePersonnalise styleClass="conteneurCase" HBox.hgrow="ALWAYS"/>
-		</HBox>
-	</VBox>
-
-
-
-
-	<HBox styleClass="conteneurNomsJoueurs" VBox.vgrow="ALWAYS">
-		<HBox styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
-			<Text styleClass="nomJoueur" text="%joueurUn" />
-		</HBox>
-		<HBox styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
-			<Text styleClass="nomJoueur" text="%joueurDeux" />
-		</HBox>
-	</HBox>
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="othello_javafx.vues.VuePrincipaleFX" styleClass="fenetrePrincipale">
+	<BorderPane VBox.vgrow="ALWAYS">
+		<top>
+			<MenuBar>
+				<menus>
+					<Menu styleClass="menu" text="%partieLocale">
+						<items>
+							<MenuItem fx:id="menuNouvellePartie" styleClass="menu_item" text="%nouvellePartie"/>
+							<MenuItem fx:id="menuParametres" styleClass="menu_item" text="%parametres"/>
+							<SeparatorMenuItem/>
+							<MenuItem fx:id="menuQuitter" styleClass="menu_item" text="%quitter"/>
+						</items>
+					</Menu>
+					<Menu text="Jouer en ligne">
+						<items>
+							<MenuItem fx:id="creerUnePartie" styleClass="menu_item" text="%creerUnePartie"/>
+							<MenuItem fx:id="joindreUnePartie" styleClass="menu_item" text="%joindreUnePartie"/>
+							<SeparatorMenuItem/>
+							<MenuItem fx:id="quittezUnePartie" styleClass="menu_item" text="%quittezUnePartie"/>
+						</items>
+					</Menu>
+				</menus>
+			</MenuBar>
+		</top>
+		<center>
+			<HBox alignment="center">
+				<VBox fx:id="conteneurPartie" alignment="center" HBox.hgrow="ALWAYS"/>
+			</HBox>
+		</center>
+	</BorderPane>
 </VBox>

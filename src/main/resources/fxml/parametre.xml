@@ -18,19 +18,6 @@
 <?import othello_javafx.vues.composants.Textbox?>
 
 <VBox xmlns:fx="http://javafx.com/fxml" VBox.vgrow="ALWAYS" fx:controller="othello_javafx.vues.VueParametreFX">
-	<MenuBar styleClass="Menu">
-		<menus>
-			<Menu text="Menu">
-				<items>
-					<MenuItem fx:id="nouvellePartie" text="%nouvellePartie"/>
-					<MenuItem fx:id="parametres" text="%parametres"/>
-				</items>
-
-			</Menu>
-		</menus>
-	</MenuBar>
-
-
 
 	<VBox styleClass="conteneurPrincipal" VBox.vgrow="ALWAYS" fx:id="conteneurPrincipal">
 
@@ -82,7 +69,7 @@
 			</HBox>
 
 			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-				<ButtonPersonnalise fx:id="buttonPersonnalise" styleClass="conteneurParametreTexte" Text="%Appliquerleschangements"/>
+				<ButtonPersonnalise fx:id="buttonPersonnalise" styleClass="conteneurParametreTexte" Text="%SauvegarderEtQuitter"/>
 			</HBox>
 		</VBox>
 

@@ -4,15 +4,22 @@ import commun.debogage.DoitEtre;
 import commun.debogage.J;
 import commun_client.mvc.controleurs.FabriqueControleur;
 import commun_javafx.ChargeurDeVue;
+import commun_javafx.DialogueModal;
 import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import othello.modeles.Parametre.Parametre;
+import othello_client.controleurs.ControleurPrincipal;
 import othello_client.vues.VueParametre;
+import othello_client.vues.VuePrincipale;
 import othello_javafx.afficheurs.AfficheurParametreFX;
 import othello_javafx.controleurs.ControleurParametreFX;
+import othello_javafx.controleurs.ControleurPartieLocaleFX;
+import othello_javafx.controleurs.ControleurPrincipalFX;
 import othello_javafx.vues.VueParametreFX;
+import othello_javafx.vues.VuePartieLocaleFX;
+import othello_javafx.vues.VuePrincipaleFX;
 
 import static othello_javafx.Constantes.*;
 
@@ -34,73 +41,24 @@ public class Principal extends Application {
 	public void start(Stage fenetrePrincipale) throws Exception {
 		J.appel(this);
 
-		Scene scene = creerScenePrincipale();
-
-		afficherFenetre(fenetrePrincipale, scene);
+		DialogueModal.enregistreFenetrePrincipale(fenetrePrincipale);
 		
-	}
+		ChargeurDeVue<VuePrincipaleFX> chargeur = new ChargeurDeVue<VuePrincipaleFX>(CHEMIN_PRINCIPAL_FXML,
+						CHEMIN_CHAINES,
+						CHEMIN_PRINCIPAL_CSS);
 
-	private void afficherFenetre(Stage fenetrePrincipale, Scene scene) {
-		J.appel(this);
+		Scene scene = chargeur.nouvelleScene(50, 50, 2);
 
 		fenetrePrincipale.setScene(scene);
-
-		setLargeurFenetre(fenetrePrincipale, scene.getWidth());
-		setHauteurFenetre(fenetrePrincipale, scene.getHeight());
+		
 
 		fenetrePrincipale.show();
 
-	}
-
-	private void setHauteurFenetre(Stage fenetrePrincipale, double hauteur) {
-		J.appel(this);
-
-		fenetrePrincipale.setHeight(hauteur);
-		fenetrePrincipale.setMinHeight(hauteur);
-	}
-
-	private void setLargeurFenetre(Stage fenetrePrincipale, double largeur) {
-		J.appel(this);
-
-		fenetrePrincipale.setWidth(largeur);
-		fenetrePrincipale.setMinWidth(largeur);
-	}
-
-	private Scene creerScenePrincipale() {
-		J.appel(this);
-
-		ChargeurDeVue<VueParametreFX> chargeur = new ChargeurDeVue<VueParametreFX>(CHEMIN_PARAMETRE_FXML, CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
-
-		VueParametre vue = chargeur.getVue();
-
+		VuePrincipaleFX vue = chargeur.getVue();
+		
 		DoitEtre.nonNul(vue);
 
-		Parametre partie = new Parametre();
-
-		AfficheurParametreFX afficheur = new AfficheurParametreFX();
-
-		FabriqueControleur.creerControleur(ControleurParametreFX.class, partie, vue, afficheur);
-
-		// À ajouter dans le futur fichier parametre
-
-		Scene scene = chargeur.nouvelleScene(600, 400);
-
-		// ComboBox combo = (ComboBox) scene.lookup("#couleurPiece");
-
-		// combo.getItems().addAll("Noir/Blanc", "Noir/Rouge", "Noir/Bleu",
-		// "Blanc/Rouge", "Blanc/Bleu");
-
-		// combo = (ComboBox) scene.lookup("#couleurPlateau");
-
-		// combo.getItems().addAll("Blanc", "Noir", "Bleu", "Rouge", "Bleu", "Vert");
-
-		DoitEtre.nonNul(scene);
-
-		return scene;
-	}
-
-	@Override
-	public void stop() {
-		J.appel(this);
-	}
+		FabriqueControleur.creerControleur(ControleurPrincipalFX.class, vue);
+		
+	}	
 }
