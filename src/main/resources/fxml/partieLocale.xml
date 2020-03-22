@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.control.ComboBox?>
+
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.MenuBar?>
+
+<?import othello_javafx.vues.composants.CaseAjustable?>
+<?import othello_javafx.vues.composants.CerclePersonnalise?>
+
+<?import othello_javafx.vues.composants.ConteneurEntetes?>
+<?import othello_javafx.vues.composants.ConteneurGrille?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal" fx:controller="othello_javafx.vues.VuePartieLocaleFX">
+
+	<VBox styleClass="conteneurTableJeu" VBox.vgrow="ALWAYS">
+        <ConteneurEntetes fx:id="conteneurEntetes" 
+                          styleClass="conteneurBoutons" 
+                          texteBouton="↡"
+                          VBox.vgrow="SOMETIMES"/>
+        <VBox styleClass="petitEspace"/>
+        <ConteneurGrille fx:id="conteneurGrille" 
+        			 	 styleClass="conteneurGrille" 
+        	             couleurBlanc="#ffffff"
+        	             couleurNoir="#000000"
+        	             VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+
+
+
+	<HBox styleClass="conteneurNomsJoueurs" VBox.vgrow="ALWAYS">
+		<HBox styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
+			<Text styleClass="nomJoueur" text="%joueurUn" />
+		</HBox>
+		<HBox styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
+			<Text styleClass="nomJoueur" text="%joueurDeux" />
+		</HBox>
+	</HBox>
+</VBox>
