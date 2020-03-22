@@ -2,28 +2,45 @@ package othello_javafx.vues.composants;
 
 
 import commun.debogage.J;
+import commun_client.commandes.FabriqueCommande;
 import commun_javafx.vues.composants.CanvasAjustable;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import othello.enumerations.Couleur;
+import othello_javafx.commandes.jouer_ici.JouerIci;
+import othello_javafx.commandes.jouer_ici.JouerIciPourEnvoi;
 
 public class CaseAjustable extends CanvasAjustable {
     
     private final double TAILLE_POURCENTAGE = 0.6;
     
+    private Button bouton;
+    
     private Color couleurBlanc;
     private Color couleurNoir;
+    
+    private int indiceColonne;
+    private int indiceLigne;
+	private JouerIciPourEnvoi jouerIciPourEnvoi;
 
-    public CaseAjustable(Color couleurBlanc, Color couleurNoir) {
+    public CaseAjustable(Color couleurBlanc, Color couleurNoir, int indiceColonne, int indiceLigne) {
         super();
         J.appel(this);
         
         this.couleurBlanc = couleurBlanc;
         this.couleurNoir = couleurNoir;
         
-
+        this.indiceColonne = indiceColonne;
+        this.indiceLigne = indiceLigne;
+        
         initialiserPinceau();
         dessinerCase();
+        
+        installerCapteurJouerIci();
     }
 
     public void afficherJeton(Couleur couleur) {
@@ -153,4 +170,29 @@ public class CaseAjustable extends CanvasAjustable {
         
         return laCase;
     }
+    
+    
+    public void installerCapteurJouerIci() {
+		J.appel(this);
+		
+		this.setOnMouseClicked(new EventHandler<Event>() {
+			@Override
+			public void handle(Event event) {
+				J.appel(this);
+								
+				jouerIciPourEnvoi.setIndiceColonne(indiceColonne);
+				jouerIciPourEnvoi.setIndiceLigne(indiceLigne);
+				jouerIciPourEnvoi.envoyerCommande();
+				
+			}
+		});
+		
+	}
+
+    public void obtenirJouerIciPourEnvoi() {
+		J.appel(this);
+		
+		jouerIciPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(JouerIci.class);
+		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+	}
 }

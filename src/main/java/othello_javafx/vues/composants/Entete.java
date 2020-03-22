@@ -37,7 +37,7 @@ public class Entete extends HBox {
 			@Override
 			public void handle(ActionEvent event) {
 				J.appel(this);
-				
+
 				jouerIciPourEnvoi.setIndiceColonne(indiceColonne);
 				jouerIciPourEnvoi.envoyerCommande();
 			}

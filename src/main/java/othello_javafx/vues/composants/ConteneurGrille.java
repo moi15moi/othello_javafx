@@ -1,7 +1,11 @@
 package othello_javafx.vues.composants;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import commun.debogage.J;
 import javafx.beans.NamedArg;
+import javafx.scene.Node;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -34,7 +38,7 @@ public class ConteneurGrille extends VBox {
         
         for(int i = 0; i < hauteur; i++) {
 
-            this.getChildren().add(new ConteneurLigne(largeur, couleurBlanc, couleurNoir));
+            this.getChildren().add(new ConteneurLigne(i, largeur, couleurBlanc, couleurNoir));
         }
     }
 
@@ -58,5 +62,37 @@ public class ConteneurGrille extends VBox {
         J.appel(this);
 
         return (ConteneurLigne) this.getChildren().get(indiceRangee);
+    }
+    
+    
+    public void installerCapteursJouerIci() {
+        J.appel(this);
+        
+        for(ConteneurLigne conteneurLigne : conteneurLigne()) {
+            
+        	conteneurLigne.installerCapteursJouerIci();
+        }
+    }
+    
+    private List<ConteneurLigne> conteneurLigne() {
+		J.appel(this);
+
+		List<ConteneurLigne> conteneurLigne = new ArrayList<>();
+
+		for (Node enfant : this.getChildren()) {
+
+			conteneurLigne.add((ConteneurLigne) enfant);
+		}
+
+		return conteneurLigne;
+	}
+    
+    public void obtenirJouerIciPourEnvoi() {
+        J.appel(this);
+
+        for(ConteneurLigne conteneurLigne : conteneurLigne()) {
+            
+        	conteneurLigne.obtenirJouerIciPourEnvoi();
+        }
     }
 }
