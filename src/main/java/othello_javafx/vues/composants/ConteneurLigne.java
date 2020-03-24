@@ -10,19 +10,22 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import othello.enumerations.Couleur;
+import othello_javafx.commandes.jouer_ici.JouerIciPourEnvoi;
+
+import static othello_javafx.Constantes.*;
 
 public class ConteneurLigne extends HBox {
 
-	public ConteneurLigne(int nbrLigne, int largeur, Color couleurBlanc, Color couleurNoir) {
+	public ConteneurLigne(int indiceColonne, Color couleurBlanc, Color couleurNoir) {
 		J.appel(this);
 
 		this.getStyleClass().add("conteneurLigne");
 
 		VBox.setVgrow(this, Priority.ALWAYS);
 
-		for (int i = 0; i < largeur; i++) {
+		for (int indiceLigne = 0; indiceLigne < HAUTEUR_GRILLE; indiceLigne++) {
 
-			CaseAjustable caseAjustable = new CaseAjustable(couleurBlanc, couleurNoir, i, nbrLigne);
+			CaseAjustable caseAjustable = new CaseAjustable(couleurBlanc, couleurNoir, indiceColonne, indiceLigne);
 
 			caseAjustable.getStyleClass().add("conteneurCase");
 
@@ -37,12 +40,12 @@ public class ConteneurLigne extends HBox {
 
 		if (siIndiceLigneValide(indiceLigne)) {
 
-			CaseAjustable caseAjustable = getCase(indiceLigne);
+			CaseAjustable caseAjustable = getCaseAjustable(indiceLigne);
 			caseAjustable.afficherJeton(couleur);
 		}
 	}
 
-	private CaseAjustable getCase(int indiceLigne) {
+	private CaseAjustable getCaseAjustable(int indiceLigne) {
 		J.appel(this);
 
 		return (CaseAjustable) this.getChildren().get(indiceLigne);
@@ -82,6 +85,15 @@ public class ConteneurLigne extends HBox {
 		for (CaseAjustable caseAjustable : caseAjustable()) {
 
 			caseAjustable.installerCapteurJouerIci();
+		}
+	}
+	
+	public void verifierCommandesPossibles() {
+		J.appel(this);
+		
+		for (CaseAjustable caseAjustable : caseAjustable()) {
+
+			caseAjustable.verifierCommandesPossibles();
 		}
 	}
 

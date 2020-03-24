@@ -6,6 +6,6 @@ import othello.modeles.Jeton.JetonLectureSeule;
 
 public interface ColonneLectureSeule {
 	
-	List<JetonLectureSeule> getJetons();
+	JetonLectureSeule[] getJetons();
 
 }

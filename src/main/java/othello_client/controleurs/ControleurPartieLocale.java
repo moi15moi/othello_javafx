@@ -35,6 +35,14 @@ public abstract class ControleurPartieLocale<V extends VuePartieLocale,
 				modele.jouerIci(commande.getIndiceColonne(), commande.getIndiceLigne());
 				
 			}
+			
+			@Override
+			public boolean siCommandePossible(JouerIciRecue commande) {
+				J.appel(this);
+				
+				return modele.siPossibleJouerIci(commande.getIndiceColonne(), commande.getIndiceLigne());
+			}
 		});
-	} 
+	}
+	
 }

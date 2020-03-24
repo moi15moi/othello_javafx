@@ -11,14 +11,13 @@ import othello_client.vues.VuePartieLocale;
 import othello_javafx.vues.composants.ConteneurEntetes;
 import othello_javafx.vues.composants.ConteneurGrille;
 import javafx.fxml.Initializable;
+import static othello_javafx.Constantes.*;
 
 public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
     @FXML
     private Text nomJoueurUn, nomJoueurDeux;
     
-    @FXML
-    private ConteneurEntetes conteneurEntetes;
 
     @FXML
     private ConteneurGrille conteneurGrille;
@@ -29,12 +28,10 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	} 
 
     @Override
-    public void creerGrille(int largeur, int hauteur) {
+    public void creerGrille() {
         J.appel(this);
-        
-        conteneurEntetes.creerEntetes(largeur);
-        
-        conteneurGrille.creerGrille(largeur, hauteur);
+               
+        conteneurGrille.creerGrille();
 
     }
 
@@ -43,7 +40,6 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		J.appel(this);
 		
 		conteneurGrille.obtenirJouerIciPourEnvoi();
-		
 	}
 
 	@Override
@@ -59,10 +55,12 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		
 		conteneurGrille.afficherJeton(indiceColonne, indiceRangee, couleur);
 	}
-
+	
 	@Override
 	public void verifierCommandesPossibles() {
-		// TODO Auto-generated method stub
+		J.appel(this);
+
+		conteneurGrille.verifierCommandesPossibles();
 		
 	}
 

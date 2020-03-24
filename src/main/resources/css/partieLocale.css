@@ -6,7 +6,7 @@
 }
 
 .conteneurPrincipal {
-	
+	-fx-background-color: lightgreen;
 }
 
 .conteneurGrille {
@@ -15,14 +15,12 @@
 }
 
 .conteneurLigne {
-	-fx-background-color: green;
 	-fx-border-style: dashed;
     -fx-border-width: 2px;
 }
 
 .conteneurCase {
 	-fx-border-style: solid solid solid solid;
-	
 	-fx-border-width: 30px;
 	-fx-alignment: center;
 	-fx-background-color: red;

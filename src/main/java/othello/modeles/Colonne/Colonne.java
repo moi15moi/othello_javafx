@@ -1,40 +1,36 @@
 package othello.modeles.Colonne;
 
-import java.util.ArrayList;
-
-import java.util.List;
-
 import commun.debogage.J;
 import othello.enumerations.Couleur;
 import othello.modeles.Jeton.Jeton;
 import othello.modeles.Jeton.JetonLectureSeule;
+import static othello_javafx.Constantes.*;
 
 public class Colonne implements ColonneLectureSeule {
-	
-	private ArrayList<Jeton> jetons = new ArrayList<Jeton>(8);
+
+	private Jeton[] jetons = new Jeton[HAUTEUR_GRILLE];
 
 	public void ajouterJeton(int indiceLigne, Couleur couleur) {
 		J.appel(this);
-		
+
 		Jeton jeton = new Jeton();
-		
+
 		jeton.initialiser(couleur);
-		
-		jetons.get(indiceLigne).equals(jeton);
-		//jetons.add(jeton);
+
+		jetons[indiceLigne] = jeton;
+
 	}
 
 	@Override
-	public List<JetonLectureSeule> getJetons() {
+	public JetonLectureSeule[] getJetons() {
 		J.appel(this);
-		
-		List<JetonLectureSeule> jetonsLectureSeule = new ArrayList<>();
-		
-		for(Jeton jeton : jetons) {
 
-			jetonsLectureSeule.add((JetonLectureSeule) jeton);
+		JetonLectureSeule[] jetonsLectureSeule = new JetonLectureSeule[8];
+
+		for (int i = 0; i < this.jetons.length; i++) {
+			jetonsLectureSeule[i] = this.jetons[i];
 		}
-		
+
 		return jetonsLectureSeule;
 	}
 }

@@ -95,6 +95,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 		return vuePartieLocale;
 	}
 
+
 	@Override
 	public void verifierCommandesPossibles() {
 		// TODO Auto-generated method stub

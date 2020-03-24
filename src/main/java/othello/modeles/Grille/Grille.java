@@ -1,54 +1,40 @@
 package othello.modeles.Grille;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
+import static othello_javafx.Constantes.*;
 import commun.debogage.J;
 import othello.enumerations.Couleur;
-import othello.modeles.Colonne.Colonne;
-import othello.modeles.Colonne.ColonneLectureSeule;
+import othello.modeles.Jeton.Jeton;
+import othello.modeles.Jeton.JetonLectureSeule;
 
 public class Grille implements GrilleLectureSeule {
-	
-	protected List<Colonne> colonnes;
 
-	public void initialiser(int largeur) {
-		J.appel(this);
-
-		colonnes = new ArrayList<>();
-		for(int indiceColonne = 0; indiceColonne < largeur; indiceColonne++) {
-			colonnes.add(new Colonne());
-		}
-	}
+	private Jeton[][] jetons = new Jeton[LARGEUR_GRILLE][HAUTEUR_GRILLE];
 
 	public void ajouterJeton(int idColonne, int indiceLigne, Couleur couleur) {
 		J.appel(this);
-		
-		colonnes.get(idColonne).ajouterJeton(indiceLigne, couleur);
-		//colonnes.get(idColonne).getJetons().get(indiceLigne).ajouterJeton(couleur);
+
+		Jeton jeton = new Jeton();
+
+		jeton.initialiser(couleur);
+
+		jetons[idColonne][indiceLigne] = jeton;
 
 	}
 
 	@Override
-	public List<ColonneLectureSeule> getColonnes() {
+	public JetonLectureSeule[][] getJetons() {
 		J.appel(this);
-		
-		List<ColonneLectureSeule> colonnesLectureSeule = new ArrayList<>();
-		
-		for(Colonne colonne : colonnes) {
-			
-			colonnesLectureSeule.add((ColonneLectureSeule) colonne);
-			
+
+		JetonLectureSeule[][] jetonsLectureSeule = new JetonLectureSeule[LARGEUR_GRILLE][HAUTEUR_GRILLE];
+
+		for (int i = 0; i < this.jetons.length; i++) {
+
+			for (int j = 0; j < this.jetons[i].length; j++) {
+				jetonsLectureSeule[i][j] = this.jetons[i][j];
+			}
 		}
-		
-		return colonnesLectureSeule;
-		
+
+		return jetonsLectureSeule;
 	}
-
-
-
-	
 
 }

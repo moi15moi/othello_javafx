@@ -1,18 +1,14 @@
 package othello_javafx.modeles.PartieLocale;
 
-import java.util.Random;
-
 import commun.debogage.J;
 import commun.modeles.Modele;
 import othello.enumerations.Couleur;
 import othello.modeles.Grille.Grille;
 import othello.modeles.Grille.GrilleLectureSeule;
+import static othello_javafx.Constantes.*;
 
 public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements PartieLocaleLectureSeule {
 
-	final private int largeur =  8;
-	final private int hauteur = 8;
-	
 	private Couleur couleurCourante = Couleur.NOIR;
 
 	private Grille grille;
@@ -21,7 +17,6 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 		J.appel(this);
 		
 		grille = new Grille();
-		grille.initialiser(largeur);
 	}
 	
     public void jouerIci(int indiceColonne, int indiceLigne){
@@ -51,16 +46,6 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
         }
     }
 
-	public int getLargeur() {
-		J.appel(this);
-		return largeur;
-	}
-
-	public int getHauteur() {
-		J.appel(this);
-		return hauteur;
-	}
-
 	public Couleur getCouleurCourante() {
 		J.appel(this);
 		return couleurCourante;
@@ -79,6 +64,17 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 	public void setGrille(Grille grille) {
 		J.appel(this);
 		this.grille = grille;
+	}
+
+	public boolean siPossibleJouerIci(int indiceColonne, int indiceLigne) {
+		J.appel(this);
+		
+		boolean siPossibleJouerIci = false;
+		
+		if (getGrille().getJetons()[indiceColonne][indiceLigne] == null) {
+			siPossibleJouerIci = true;
+		}
+		return siPossibleJouerIci;
 	}
 
 

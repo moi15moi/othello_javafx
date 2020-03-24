@@ -4,10 +4,8 @@ package othello_javafx.vues.composants;
 import commun.debogage.J;
 import commun_client.commandes.FabriqueCommande;
 import commun_javafx.vues.composants.CanvasAjustable;
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import othello.enumerations.Couleur;
@@ -18,7 +16,6 @@ public class CaseAjustable extends CanvasAjustable {
     
     private final double TAILLE_POURCENTAGE = 0.6;
     
-    private Button bouton;
     
     private Color couleurBlanc;
     private Color couleurNoir;
@@ -193,6 +190,19 @@ public class CaseAjustable extends CanvasAjustable {
 		J.appel(this);
 		
 		jouerIciPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(JouerIci.class);
-		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 	}
+    
+    public void verifierCommandesPossibles() {
+		J.appel(this);
+		
+		jouerIciPourEnvoi.setIndiceColonne(indiceColonne);
+		jouerIciPourEnvoi.setIndiceLigne(indiceLigne);
+		setActif(jouerIciPourEnvoi.siCommandePossible());
+    }
+    
+    public void setActif(boolean caseAjustableActif) {
+		J.appel(this);
+
+		this.setDisable(!caseAjustableActif);
+    }
 }

@@ -9,16 +9,7 @@ import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import othello.modeles.Parametre.Parametre;
-import othello_client.controleurs.ControleurPrincipal;
-import othello_client.vues.VueParametre;
-import othello_client.vues.VuePrincipale;
-import othello_javafx.afficheurs.AfficheurParametreFX;
-import othello_javafx.controleurs.ControleurParametreFX;
-import othello_javafx.controleurs.ControleurPartieLocaleFX;
 import othello_javafx.controleurs.ControleurPrincipalFX;
-import othello_javafx.vues.VueParametreFX;
-import othello_javafx.vues.VuePartieLocaleFX;
 import othello_javafx.vues.VuePrincipaleFX;
 
 import static othello_javafx.Constantes.*;

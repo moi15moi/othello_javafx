@@ -21,14 +21,9 @@
 <VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal" fx:controller="othello_javafx.vues.VuePartieLocaleFX">
 
 	<VBox styleClass="conteneurTableJeu" VBox.vgrow="ALWAYS">
-        <ConteneurEntetes fx:id="conteneurEntetes" 
-                          styleClass="conteneurBoutons" 
-                          texteBouton="↡"
-                          VBox.vgrow="SOMETIMES"/>
-        <VBox styleClass="petitEspace"/>
-        <ConteneurGrille fx:id="conteneurGrille" 
+              <ConteneurGrille fx:id="conteneurGrille" 
         			 	 styleClass="conteneurGrille" 
-        	             couleurBlanc="#ffffff"
+        	             couleurBlanc="#4287f5"
         	             couleurNoir="#000000"
         	             VBox.vgrow="ALWAYS"/>
     </VBox>
