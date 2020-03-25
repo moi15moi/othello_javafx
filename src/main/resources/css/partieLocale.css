@@ -5,25 +5,23 @@
 
 }
 
-.conteneurPrincipal {
-	-fx-background-color: lightgreen;
-}
-
 .conteneurGrille {
 	-fx-alignment: center;
 	/*-fx-padding: 20px;*/
 }
 
 .conteneurLigne {
-	-fx-border-style: dashed;
     -fx-border-width: 2px;
 }
 
 .conteneurCase {
 	-fx-border-style: solid solid solid solid;
-	-fx-border-width: 30px;
 	-fx-alignment: center;
-	-fx-background-color: red;
+	-fx-background-color: green;
+	/*-fx-border-width: 30px;*/
+	-fx-min-width: 30px;
+	-fx-min-height: 30px;
+
 }
 
 .conteneurNomsJoueurs {
@@ -44,14 +42,4 @@
     -fx-border-width: 2px;
     -fx-background-color: lightgreen;
 }
-
-.cercle {
-	-fx-min-width: 10px;
-    -fx-max-width: 10px;
-    -fx-min-height: 10px;
-    -fx-max-height: 10px;
-    -fx-border-radius: 5px;
-    -fx-background-color: red;
-}
-
 

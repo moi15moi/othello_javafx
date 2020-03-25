@@ -18,7 +18,6 @@ public class Grille implements GrilleLectureSeule {
 		jeton.initialiser(couleur);
 
 		jetons[idColonne][indiceLigne] = jeton;
-
 	}
 
 	@Override

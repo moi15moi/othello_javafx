@@ -41,6 +41,15 @@ public class ConteneurGrille extends VBox {
 
 			this.getChildren().add(new ConteneurLigne(indiceColonne, couleurBlanc, couleurNoir));
 		}
+		
+		ajouterJetonInitial();
+	}
+	
+	public void ajouterJetonInitial() {
+		afficherJeton(3, 3, Couleur.BLANC);
+		afficherJeton(4, 3, Couleur.NOIR);
+		afficherJeton(3, 4, Couleur.NOIR);
+		afficherJeton(4, 4, Couleur.BLANC);
 	}
 
 	public void afficherJeton(int indiceColonne, int indiceLigne, Couleur couleur) {
