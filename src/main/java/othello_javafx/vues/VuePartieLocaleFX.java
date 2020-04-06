@@ -25,6 +25,8 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		J.appel(this);
+		
+		J.valeurs("Hum... conteneurGrille.getStyle() est vide?", conteneurGrille.getStyle());
 	} 
 
     @Override

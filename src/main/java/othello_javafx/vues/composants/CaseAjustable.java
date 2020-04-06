@@ -38,10 +38,19 @@ public class CaseAjustable extends CanvasAjustable {
 		installerCapteurJouerIci();
 		
 		
+		
+		
+	}
+	
+	private Color getCouleurCase() {
+		J.appel(this);
+
+		return (Color) pinceau.getFill();
 	}
 
 	public void afficherJeton(Couleur couleur) {
 		J.appel(this);
+		
 				
 		switch (couleur) {
 
@@ -55,6 +64,8 @@ public class CaseAjustable extends CanvasAjustable {
 			dessinerCase();
 			break;
 		}
+
+		J.valeurs("couleur de la case: ", getCouleurCase().toString());
 	}
 
 	@Override
