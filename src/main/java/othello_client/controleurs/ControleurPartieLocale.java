@@ -6,7 +6,6 @@ import commun_client.mvc.controleurs.RecepteurCommandeMVC;
 import othello_client.afficheurs.AfficheurPartieLocale;
 import othello_client.vues.VuePartieLocale;
 import othello_javafx.commandes.jouer_ici.JouerIci;
-import othello_javafx.commandes.jouer_ici.JouerIciPourEnvoi;
 import othello_javafx.commandes.jouer_ici.JouerIciRecue;
 import othello_javafx.modeles.PartieLocale.PartieLocale;
 import othello_javafx.modeles.PartieLocale.PartieLocaleLectureSeule;
@@ -33,16 +32,14 @@ public abstract class ControleurPartieLocale<V extends VuePartieLocale, A extend
 
 			}
 
-			// Il faut que cette méthode est JouerIciPourEnvoi et non JouerIciRecue
 			@Override
-			public boolean siCommandePossible(JouerIciPourEnvoi commande) {
+			public boolean siCommandePossible(JouerIciRecue commande) {
 				J.appel(this);
 
 				return modele.siPossibleJouerIci(commande.getIndiceColonne(), commande.getIndiceLigne());
 			}
 
 		});
-
 	}
 
 }
