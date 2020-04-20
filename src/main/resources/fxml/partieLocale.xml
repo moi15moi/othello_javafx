@@ -20,13 +20,11 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal" fx:controller="othello_javafx.vues.VuePartieLocaleFX">
 
-	<VBox styleClass="conteneurTableJeu" VBox.vgrow="ALWAYS">
               <ConteneurGrille fx:id="conteneurGrille" 
         			 	 styleClass="conteneurGrille" 
         	             couleurBlanc="#4287f5"
         	             couleurNoir="#000000"
         	             VBox.vgrow="ALWAYS"/>
-    </VBox>
 
 
 

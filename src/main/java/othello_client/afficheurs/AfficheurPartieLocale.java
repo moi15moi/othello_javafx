@@ -26,17 +26,32 @@ public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
 		GrilleLectureSeule grille = partieLectureSeule.getGrille();
 
 		rafraichirGrille(grille, vue);
+		
+		vue.joueurCourant(partieLectureSeule.getCouleurCourante());
+
 	}
 
+	private void rafraichirJoueurCourant(Couleur couleurCourante) {
+		J.appel(this);
+		
+
+		
+	}
 	private void rafraichirGrille(GrilleLectureSeule grille, VuePartieLocale vue) {
 		J.appel(this);
 
 		JetonLectureSeule[][] jetons = grille.getJetons();
-
+		boolean[][] coupPossible = grille.getCoupPossibles();
+		
 		for (int indiceColonne = 0; indiceColonne < jetons.length; indiceColonne++) {
 
 			for (int indiceLigne = 0; indiceLigne < jetons[indiceColonne].length; indiceLigne++) {
-
+				vue.cacherJeton(indiceColonne, indiceLigne);
+				
+				if (coupPossible[indiceColonne][indiceLigne]) {
+					vue.afficherCoupPossible(indiceColonne, indiceLigne);
+				}
+				
 				if (jetons[indiceColonne][indiceLigne] != null) {
 					JetonLectureSeule jeton = jetons[indiceColonne][indiceLigne];
 					Couleur couleur = jeton.getCouleur();
@@ -45,5 +60,6 @@ public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
 			}
 
 		}
+		
 	}
 }

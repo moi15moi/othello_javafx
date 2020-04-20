@@ -36,20 +36,12 @@ public class ConteneurGrille extends VBox {
 		this.getStyleClass().add("conteneurGrille");
 
 		VBox.setVgrow(this, Priority.ALWAYS);
-
+		
 		for (int indiceColonne = 0; indiceColonne < LARGEUR_GRILLE; indiceColonne++) {
 
 			this.getChildren().add(new ConteneurLigne(indiceColonne, couleurBlanc, couleurNoir));
 		}
 		
-		ajouterJetonInitial();
-	}
-	
-	public void ajouterJetonInitial() {
-		afficherJeton(3, 3, Couleur.BLANC);
-		afficherJeton(4, 3, Couleur.NOIR);
-		afficherJeton(3, 4, Couleur.NOIR);
-		afficherJeton(4, 4, Couleur.BLANC);
 	}
 
 	public void afficherJeton(int indiceColonne, int indiceLigne, Couleur couleur) {
@@ -113,5 +105,24 @@ public class ConteneurGrille extends VBox {
 			conteneurLigne.verifierCommandesPossibles();
 		}
 
+	}
+	public void afficherCoupPossible(int indiceColonne, int indiceLigne) {
+		J.appel(this);
+
+		if (siIndiceRangeeValide(indiceLigne)) {
+
+			ConteneurLigne conteneurLigne = getConteneurLigne(indiceColonne);
+			conteneurLigne.afficherCoupPossible(indiceLigne);
+		}
+	}
+	
+	public void cacherJeton(int indiceColonne, int indiceLigne) {
+		J.appel(this);
+
+		if (siIndiceRangeeValide(indiceLigne)) {
+
+			ConteneurLigne conteneurLigne = getConteneurLigne(indiceColonne);
+			conteneurLigne.cacherJeton(indiceLigne);
+		}
 	}
 }

@@ -27,8 +27,6 @@ public class ConteneurLigne extends HBox {
 
 			CaseAjustable caseAjustable = new CaseAjustable(couleurBlanc, couleurNoir, indiceColonne, indiceLigne);
 
-			caseAjustable.getStyleClass().add("conteneurCase");
-
 			HBox.setHgrow(caseAjustable, Priority.ALWAYS);
 
 			this.getChildren().add(caseAjustable);
@@ -96,5 +94,26 @@ public class ConteneurLigne extends HBox {
 			caseAjustable.verifierCommandesPossibles();
 		}
 	}
+	
+	
+	public void afficherCoupPossible(int indiceLigne) {
+		J.appel(this);
 
+		if (siIndiceLigneValide(indiceLigne)) {
+
+			CaseAjustable caseAjustable = getCaseAjustable(indiceLigne);
+			caseAjustable.afficherCoupPossible();
+		}
+	}
+	
+	
+	public void cacherJeton(int indiceLigne) {
+		J.appel(this);
+
+		if (siIndiceLigneValide(indiceLigne)) {
+
+			CaseAjustable caseAjustable = getCaseAjustable(indiceLigne);
+			caseAjustable.cacherJeton();
+		}
+	}
 }

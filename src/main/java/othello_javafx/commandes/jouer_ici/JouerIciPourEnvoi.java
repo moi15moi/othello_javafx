@@ -8,4 +8,5 @@ public interface JouerIciPourEnvoi extends CommandePourEnvoi {
 	void setIndiceColonne(int indiceColonne);
 	void setIndiceLigne(int indiceLigne);
 	void setCouleurCourante(Couleur couleurCourante);
+	int getIndiceColonne();
 }

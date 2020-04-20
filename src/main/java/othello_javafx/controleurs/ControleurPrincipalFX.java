@@ -19,6 +19,7 @@ import othello.modeles.Parametre.ParametreLectureSeule;
 import othello_client.controleurs.ControleurPrincipal;
 import othello_javafx.afficheurs.AfficheurParametreFX;
 import othello_javafx.afficheurs.AfficheurPartieLocaleFX;
+import othello_javafx.commandes.jouer_ici.JouerIciPourEnvoi;
 import othello_javafx.commandes.nouvelle_partie.NouvellePartie;
 import othello_javafx.commandes.nouvelle_partie.NouvellePartieRecue;
 import othello_javafx.commandes.ouvrir_parametres.OuvrirParametres;
@@ -32,16 +33,15 @@ import othello_javafx.vues.VuePrincipaleFX;
 
 @SuppressWarnings("rawtypes")
 public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> {
-	
+
 	static private final Parametre parametres = new Parametre();
 
 	static public ParametreLectureSeule getParametre() {
 		J.appel(ControleurParametreFX.class);
-		
+
 		return parametres;
 	}
-	
-	
+
 	@Override
 	protected void installerReceptionCommandes() {
 		J.appel(this);
@@ -60,9 +60,12 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 				J.appel(this);
 
 				ouvrirParametres();
-				
-				//this.setStyle("-fx-background-color:rgb(" + (int) (parametres.getCouleurFondEcran().getRed() * 255) + ","
-				//		+ (int) (parametres.getCouleurFondEcran().getGreen() * 255) + "," + (int) (parametres.getCouleurFondEcran().getBlue() * 255) + ");");
+				getParametre();
+
+				// this.setStyle("-fx-background-color:rgb(" + (int)
+				// (parametres.getCouleurFondEcran().getRed() * 255) + ","
+				// + (int) (parametres.getCouleurFondEcran().getGreen() * 255) + "," + (int)
+				// (parametres.getCouleurFondEcran().getBlue() * 255) + ");");
 			}
 		});
 
@@ -91,7 +94,8 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 	private void ouvrirParametres() {
 		J.appel(this);
 
-		ChargeurDeVue<VueParametreFX> chargeur = new ChargeurDeVue<VueParametreFX>(CHEMIN_PARAMETRE_FXML, CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
+		ChargeurDeVue<VueParametreFX> chargeur = new ChargeurDeVue<VueParametreFX>(CHEMIN_PARAMETRE_FXML,
+				CHEMIN_CHAINES, CHEMIN_PARAMETRE_CSS);
 
 		VueParametreFX vue = chargeur.getVue();
 
@@ -115,7 +119,7 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 		// combo.getItems().addAll("Blanc", "Noir", "Bleu", "Rouge", "Bleu", "Vert");
 
 		DoitEtre.nonNul(scene);
-		
+
 		DialogueModal.ouvrirDialogueModal(scene);
 	}
 

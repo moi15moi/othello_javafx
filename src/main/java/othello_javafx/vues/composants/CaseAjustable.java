@@ -10,6 +10,7 @@ import javafx.scene.shape.ArcType;
 import othello.enumerations.Couleur;
 import othello_javafx.commandes.jouer_ici.JouerIci;
 import othello_javafx.commandes.jouer_ici.JouerIciPourEnvoi;
+import othello.modeles.Grille.Grille;
 
 public class CaseAjustable extends CanvasAjustable {
 
@@ -32,29 +33,45 @@ public class CaseAjustable extends CanvasAjustable {
 		this.indiceColonne = indiceColonne;
 		this.indiceLigne = indiceLigne;
 
-		initialiserPinceau();
-		dessinerCase();
+		this.getStyleClass().add("conteneurCase");
 
-		installerCapteurJouerIci();
-		
-		
+		initialiserPinceau();
+
 	}
 
 	public void afficherJeton(Couleur couleur) {
 		J.appel(this);
-				
+
 		switch (couleur) {
 
 		case BLANC:
 			pinceau.setFill(couleurBlanc);
+			pinceau.setStroke(Color.BLACK);
 			dessinerCase();
 			break;
 
 		case NOIR:
 			pinceau.setFill(couleurNoir);
+			pinceau.setStroke(Color.BLACK);
 			dessinerCase();
 			break;
 		}
+	}
+
+	public void afficherCoupPossible() {
+		J.appel(this);
+
+		pinceau.setFill(Color.WHEAT);
+		pinceau.setStroke(Color.BLACK);
+		dessinerCase();
+
+	}
+
+	public void cacherJeton() {
+		J.appel(this);
+
+		viderDessin();
+
 	}
 
 	@Override
@@ -69,6 +86,7 @@ public class CaseAjustable extends CanvasAjustable {
 		J.appel(this);
 
 		dessinerCase();
+
 	}
 
 	@Override
@@ -92,8 +110,8 @@ public class CaseAjustable extends CanvasAjustable {
 	private void initialiserPinceau() {
 		J.appel(this);
 
-		pinceau.setFill(Color.WHITE);
-		pinceau.setStroke(Color.BLACK);
+		pinceau.setFill(Color.TRANSPARENT);
+		pinceau.setStroke(Color.TRANSPARENT);
 		pinceau.setLineWidth(0.01 * getWidth());
 	}
 
@@ -165,7 +183,7 @@ public class CaseAjustable extends CanvasAjustable {
 			@Override
 			public void handle(Event event) {
 				J.appel(this);
-				System.out.println(indiceColonne + " " + indiceLigne);
+
 				jouerIciPourEnvoi.setIndiceColonne(indiceColonne);
 				jouerIciPourEnvoi.setIndiceLigne(indiceLigne);
 				jouerIciPourEnvoi.envoyerCommande();
@@ -189,9 +207,10 @@ public class CaseAjustable extends CanvasAjustable {
 		setActif(jouerIciPourEnvoi.siCommandePossible());
 	}
 
-	public void setActif(boolean caseAjustableActif) {
+	public void setActif(boolean siPossibleJouerIci) {
 		J.appel(this);
 
-		this.setDisable(!caseAjustableActif);
+		//this.setDisable(!siPossibleJouerIci);
+
 	}
 }
