@@ -19,7 +19,7 @@
 							<MenuItem fx:id="menuQuitter" styleClass="menu_item" text="%quitter"/>
 						</items>
 					</Menu>
-					<Menu text="Jouer en ligne">
+					<Menu styleClass="menu" text="%jouerEnLigne">
 						<items>
 							<MenuItem fx:id="creerUnePartie" styleClass="menu_item" text="%creerUnePartie"/>
 							<MenuItem fx:id="joindreUnePartie" styleClass="menu_item" text="%joindreUnePartie"/>

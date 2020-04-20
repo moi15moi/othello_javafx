@@ -5,6 +5,8 @@ import java.util.ResourceBundle;
 
 import commun.debogage.J;
 import javafx.fxml.FXML;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import othello.enumerations.Couleur;
@@ -16,38 +18,38 @@ import static othello_javafx.Constantes.*;
 
 public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
-    @FXML
-    private Text nomJoueurUn, nomJoueurDeux;
-    
-    @FXML
-    private Text conteneurNomJoueurUn, conteneurNomJoueurDeux;
-    
-    @FXML
-    private ConteneurGrille conteneurGrille;
-    
+	@FXML
+	private Text nomJoueurUn, nomJoueurDeux;
+
+	@FXML
+	private HBox conteneurNomJoueurUn, conteneurNomJoueurDeux;
+
+	@FXML
+	private ConteneurGrille conteneurGrille;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		J.appel(this);
-	} 
+	}
 
-    @Override
-    public void creerGrille() {
-        J.appel(this);
-               
-        conteneurGrille.creerGrille();
-    }
+	@Override
+	public void creerGrille() {
+		J.appel(this);
+
+		conteneurGrille.creerGrille();
+	}
 
 	@Override
 	public void obtenirCommandesPourEnvoi() {
 		J.appel(this);
-		
+
 		conteneurGrille.obtenirJouerIciPourEnvoi();
 	}
 
 	@Override
 	public void installerCapteursEvenementsUsager() {
 		J.appel(this);
-		
+
 		conteneurGrille.installerCapteursJouerIci();
 	}
 
@@ -57,13 +59,13 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
 		conteneurGrille.afficherJeton(indiceColonne, indiceRangee, couleur);
 	}
-	
+
 	@Override
 	public void verifierCommandesPossibles() {
 		J.appel(this);
 
-		//conteneurGrille.verifierCommandesPossibles();
-		
+		// conteneurGrille.verifierCommandesPossibles();
+
 	}
 
 	@Override
@@ -71,7 +73,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		J.appel(this);
 
 		conteneurGrille.afficherCoupPossible(indiceColonne, indiceRangee);
-		
+
 	}
 
 	@Override
@@ -79,38 +81,28 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		J.appel(this);
 
 		conteneurGrille.cacherJeton(indiceColonne, indiceRangee);
-		
+
 	}
 
 	@Override
 	public void joueurCourant(Couleur couleurCourante) {
 		J.appel(this);
-		
-		Color nom = new Color(1, 1, 0, 1);
+
 
 		switch (couleurCourante) {
-
+		
+		//Joueur02	
 		case BLANC:
-			nomJoueurUn.setStyle("-fx-background-color:rgb(" + (int) (nom.getRed() * 255) + ","
-					+ (int) (nom.getGreen() * 255) + "," + (int) (nom.getBlue() * 255) + ");");
-
-			nomJoueurUn.applyCss();
-			
-			nomJoueurUn.setOpacity(1);
-			
-			
+			conteneurNomJoueurUn.setOpacity(0.5);
+			conteneurNomJoueurDeux.setOpacity(1);
 			break;
+		//Joueur01	
 		case NOIR:
-			nomJoueurDeux.setStyle("-fx-background-color:rgb(" + (int) (nom.getRed() * 255) + ","
-					+ (int) (nom.getGreen() * 255) + "," + (int) (nom.getBlue() * 255) + ");");
-
-			nomJoueurDeux.applyCss();
-			
-			nomJoueurUn.setOpacity(0.5);
-
+			conteneurNomJoueurUn.setOpacity(1);
+			conteneurNomJoueurDeux.setOpacity(0.5);
 			break;
 		}
-		
+
 	}
 
 }

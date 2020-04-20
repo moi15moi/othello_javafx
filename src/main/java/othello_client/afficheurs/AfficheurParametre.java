@@ -13,10 +13,6 @@ public abstract class AfficheurParametre <V extends VueParametre> extends Affich
 	public void initialiserAffichage(ParametreLectureSeule modeleLectureSeule, V vue) {
 		J.appel(this);
 		
-		
-		Color couleur = modeleLectureSeule.getCouleurAleatoire();
-		vue.afficherCouleurFondEcran(couleur);
-		
 		vue.installerCapteursEvenementsUsagers();
 		
 	}

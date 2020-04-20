@@ -23,14 +23,6 @@
 
 		<VBox styleClass="conteneurParametres" VBox.vgrow="ALWAYS">
 
-			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">
-					<Text styleClass="conteneurParametreTexte" Text="%Couleurdespieces"/>
-				</HBox >
-				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">
-					<ComboBox styleClass="combobox" id="couleurPiece" HBox.hgrow="ALWAYS"/>
-				</HBox>
-			</HBox>
 
 			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
 				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">

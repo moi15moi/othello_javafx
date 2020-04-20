@@ -30,13 +30,7 @@ public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
 		vue.joueurCourant(partieLectureSeule.getCouleurCourante());
 
 	}
-
-	private void rafraichirJoueurCourant(Couleur couleurCourante) {
-		J.appel(this);
-		
-
-		
-	}
+	
 	private void rafraichirGrille(GrilleLectureSeule grille, VuePartieLocale vue) {
 		J.appel(this);
 
