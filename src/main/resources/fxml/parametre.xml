@@ -47,7 +47,7 @@
 					<Text styleClass="conteneurParametreTexte" Text="%NomJoueur01"/>
 				</HBox >
 				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">				
-					<TextField styleClass="combobox" text="%joueurUn"/>
+					<TextField fx:id="texteJoueurUn" styleClass="combobox" text="%joueurUn"/>
 				</HBox>
 			</HBox>
 

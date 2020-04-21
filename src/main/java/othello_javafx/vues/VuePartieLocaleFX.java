@@ -3,6 +3,7 @@ package othello_javafx.vues;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import commun.debogage.DoitEtre;
 import commun.debogage.J;
 import javafx.fxml.FXML;
 import javafx.scene.layout.HBox;
@@ -30,6 +31,8 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		J.appel(this);
+		
+		DoitEtre.nonNul(nomJoueurUn);
 	}
 
 	@Override
@@ -103,6 +106,13 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 			break;
 		}
 
+	}
+
+	@Override
+	public void afficherNomJoueurUn(String nomJoueurUn) {
+		J.appel(this);
+		
+		this.nomJoueurUn.setText(nomJoueurUn);
 	}
 
 }

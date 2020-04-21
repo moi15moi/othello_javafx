@@ -8,10 +8,12 @@ import othello_javafx.afficheurs.AfficheurParametreFX;
 import othello_javafx.vues.VueParametreFX;
 import othello_javafx.commandes.Cliquer.Cliquer;
 import othello_javafx.commandes.Cliquer.CliquerRecue;
+import othello_javafx.commandes.changer_nom_joueur_un.ChangerNomJoueurUn;
+import othello_javafx.commandes.changer_nom_joueur_un.ChangerNomJoueurUnRecue;
 
 
 public class ControleurParametreFX extends ControleurParametre<VueParametreFX, AfficheurParametreFX> {
-
+	
 	public void installerReceptionCommandes() {
 		J.appel(this);
 
@@ -23,6 +25,16 @@ public class ControleurParametreFX extends ControleurParametre<VueParametreFX, A
 				modele.setCouleurFondEcran(couleur);
 			}
 
+		});
+
+		installerRecepteurCommande(ChangerNomJoueurUn.class, new RecepteurCommandeMVC<ChangerNomJoueurUnRecue>() {
+
+			@Override
+			public void executerCommandeMVC(ChangerNomJoueurUnRecue commande) {
+				J.appel(this);
+				
+				modele.changerNomJoueurUn(commande.getNomJoueurUn());
+			}
 		});
 
 	}

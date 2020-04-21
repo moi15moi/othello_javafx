@@ -13,6 +13,7 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 	private Couleur couleurCourante = Couleur.NOIR;
 
 	private Grille grille;
+	
 
 	public PartieLocale() {
 		J.appel(this);

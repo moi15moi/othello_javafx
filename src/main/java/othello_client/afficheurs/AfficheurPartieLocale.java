@@ -6,6 +6,7 @@ import othello.enumerations.Couleur;
 import othello.modeles.Grille.GrilleLectureSeule;
 import othello.modeles.Jeton.JetonLectureSeule;
 import othello_client.vues.VuePartieLocale;
+import othello_javafx.controleurs.ControleurPrincipalFX;
 import othello_javafx.modeles.PartieLocale.PartieLocaleLectureSeule;
 
 public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
@@ -28,7 +29,8 @@ public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
 		rafraichirGrille(grille, vue);
 		
 		vue.joueurCourant(partieLectureSeule.getCouleurCourante());
-
+		
+		vue.afficherNomJoueurUn(ControleurPrincipalFX.getParametre().getNomJoueurUn());
 	}
 	
 	private void rafraichirGrille(GrilleLectureSeule grille, VuePartieLocale vue) {

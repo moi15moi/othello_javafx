@@ -7,8 +7,8 @@ import commun.modeles.*;
 public interface ParametreLectureSeule extends ModeleLectureSeule {
 
 	Color getCouleurAleatoire();
-	
-	void setCouleurFondEcran(Color couleur);
-
 	Color getCouleurFondEcran();
+	
+	String getNomJoueurUn();
+	String getNomJoueurDeux();
 }

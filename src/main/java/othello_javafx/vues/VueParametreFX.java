@@ -11,11 +11,14 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import othello_client.vues.VueParametre;
 import othello_javafx.commandes.Cliquer.Cliquer;
 import othello_javafx.commandes.Cliquer.CliquerPourEnvoi;
+import othello_javafx.commandes.changer_nom_joueur_un.ChangerNomJoueurUn;
+import othello_javafx.commandes.changer_nom_joueur_un.ChangerNomJoueurUnPourEnvoi;
 import othello_javafx.vues.composants.ButtonPersonnalise;
 import othello_javafx.vues.composants.Textbox;
 
@@ -26,11 +29,16 @@ public class VueParametreFX implements VueParametre, Initializable {
 
 	@FXML
 	private Textbox couleurFondEcran;
-
+	
 	@FXML
 	private VBox conteneurPrincipal;
+	
+	@FXML
+	private TextField texteJoueurUn;
 
 	private CliquerPourEnvoi cliquerPourEnvoi;
+	
+	private ChangerNomJoueurUnPourEnvoi changerNomJoueurUn;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -39,6 +47,7 @@ public class VueParametreFX implements VueParametre, Initializable {
 		DoitEtre.nonNul(buttonPersonnalise);
 		DoitEtre.nonNul(conteneurPrincipal);
 		DoitEtre.nonNul(couleurFondEcran);
+		DoitEtre.nonNul(texteJoueurUn);
 
 	}
 
@@ -54,7 +63,7 @@ public class VueParametreFX implements VueParametre, Initializable {
 		J.appel(this);
 
 		cliquerPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(Cliquer.class);
-
+		changerNomJoueurUn = FabriqueCommande.obtenirCommandePourEnvoi(ChangerNomJoueurUn.class);
 	}
 
 	@Override
@@ -72,18 +81,18 @@ public class VueParametreFX implements VueParametre, Initializable {
 				try {
 
 					Color couleurDesiree = Color.valueOf(couleurDesireeChaine);
-
 					cliquerPourEnvoi.setCouleurFondEcran(couleurDesiree);
-
 					cliquerPourEnvoi.envoyerCommande();
 
 				} catch (Exception e) {
 
 					Erreur.avertissement("Couleur inconnue: " + couleurDesireeChaine + "   " + e.getMessage());
 				}
+				
+				changerNomJoueurUn.setNomJoueurUn(texteJoueurUn.getText());
+				changerNomJoueurUn.envoyerCommande();
 			}
 		});
-
 	}
 
 	@Override

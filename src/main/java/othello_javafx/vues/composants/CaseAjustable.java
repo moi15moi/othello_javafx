@@ -3,6 +3,7 @@ package othello_javafx.vues.composants;
 import commun.debogage.J;
 import commun_client.commandes.FabriqueCommande;
 import commun_javafx.vues.composants.CanvasAjustable;
+import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.paint.Color;
@@ -96,6 +97,15 @@ public class CaseAjustable extends CanvasAjustable {
 		viderDessin();
 
 		dessinerCase();
+
+		Platform.runLater(new Runnable() {
+			@Override
+			public void run() {
+				J.appel(this);
+				
+				CaseAjustable.this.requestLayout();
+			}
+		});
 	}
 
 	@Override
@@ -105,6 +115,15 @@ public class CaseAjustable extends CanvasAjustable {
 		viderDessin();
 
 		dessinerCase();
+
+		Platform.runLater(new Runnable() {
+			@Override
+			public void run() {
+				J.appel(this);
+				
+				CaseAjustable.this.requestLayout();
+			}
+		});
 	}
 
 	private void initialiserPinceau() {

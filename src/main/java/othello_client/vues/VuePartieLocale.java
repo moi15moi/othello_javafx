@@ -14,5 +14,7 @@ public interface VuePartieLocale extends Vue {
 	void cacherJeton(int indiceColonne, int indiceRangee);
 	
 	void joueurCourant(Couleur couleurCourante);
+	
+	void afficherNomJoueurUn(String nomJoueurUn);
 
 }

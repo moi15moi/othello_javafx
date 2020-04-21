@@ -7,6 +7,10 @@ import commun.debogage.J;
 import commun.modeles.Modele;
 
 public class Parametre extends Modele<ParametreLectureSeule> implements ParametreLectureSeule {
+	
+	private String nomJoueurUn;
+	private String nomJoueurDeux;
+
 	Color couleurFondEcran;
 
 	@Override
@@ -23,10 +27,21 @@ public class Parametre extends Modele<ParametreLectureSeule> implements Parametr
 		return couleur;
 	}
 	
-	@Override
 	public void setCouleurFondEcran(Color couleur) {
 		J.appel(this);
 		this.couleurFondEcran = couleur;
+	}
+	
+	public void changerNomJoueurUn(String nomJoueurUn) {
+		J.appel(this);
+		
+		this.nomJoueurUn = nomJoueurUn;
+	}
+
+	public void changerNomJoueurDeux(String nomJoueurDeux) {
+		J.appel(this);
+		
+		this.nomJoueurDeux = nomJoueurDeux;
 	}
 	
 	
@@ -37,4 +52,19 @@ public class Parametre extends Modele<ParametreLectureSeule> implements Parametr
 		
 		return this.couleurFondEcran;
 	}
+	
+	@Override
+	public String getNomJoueurUn() {
+		J.appel(this);
+		
+		return nomJoueurUn;
+	}
+
+	@Override
+	public String getNomJoueurDeux() {
+		J.appel(this);
+		
+		return nomJoueurDeux;
+	}
+	
 }
