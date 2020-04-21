@@ -9,6 +9,7 @@ import othello.modeles.Jeton.JetonLectureSeule;
 public class Grille implements GrilleLectureSeule {
 
 	private Jeton[][] jetons = new Jeton[LARGEUR_GRILLE][HAUTEUR_GRILLE];
+	private boolean[][] coupPossible = new boolean[LARGEUR_GRILLE][HAUTEUR_GRILLE];
 
 	public void ajouterJeton(int idColonne, int indiceLigne, Couleur couleur) {
 		J.appel(this);
@@ -22,7 +23,7 @@ public class Grille implements GrilleLectureSeule {
 
 	@Override
 	public JetonLectureSeule[][] getJetons() {
-		J.appel(this);
+		//J.appel(this);
 
 		JetonLectureSeule[][] jetonsLectureSeule = new JetonLectureSeule[LARGEUR_GRILLE][HAUTEUR_GRILLE];
 
@@ -35,5 +36,17 @@ public class Grille implements GrilleLectureSeule {
 
 		return jetonsLectureSeule;
 	}
+	
+	public void ajouterCoupPossible(int idColonne, int indiceLigne, boolean coupPossible) {
+		J.appel(this);
 
+		this.coupPossible[idColonne][indiceLigne] = coupPossible;
+
+	}
+
+	@Override
+	public boolean[][] getCoupPossibles() {
+		
+		return this.coupPossible;
+	}
 }

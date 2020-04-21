@@ -20,23 +20,21 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal" fx:controller="othello_javafx.vues.VuePartieLocaleFX">
 
-	<VBox styleClass="conteneurTableJeu" VBox.vgrow="ALWAYS">
               <ConteneurGrille fx:id="conteneurGrille" 
         			 	 styleClass="conteneurGrille" 
         	             couleurBlanc="#4287f5"
         	             couleurNoir="#000000"
         	             VBox.vgrow="ALWAYS"/>
-    </VBox>
 
 
 
 
 	<HBox styleClass="conteneurNomsJoueurs" VBox.vgrow="ALWAYS">
-		<HBox styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
-			<Text styleClass="nomJoueur" text="%joueurUn" />
+		<HBox fx:id="conteneurNomJoueurUn" styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
+			<Text fx:id="nomJoueurUn" styleClass="nomJoueur" text="%joueurUn" />
 		</HBox>
-		<HBox styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
-			<Text styleClass="nomJoueur" text="%joueurDeux" />
+		<HBox fx:id="conteneurNomJoueurDeux" styleClass="conteneurNomJoueur" HBox.hgrow="ALWAYS">
+			<Text fx:id="nomJoueurDeux" styleClass="nomJoueur" text="%joueurDeux" />
 		</HBox>
 	</HBox>
 </VBox>

@@ -4,12 +4,10 @@ import commun.debogage.J;
 import commun_client.commandes.Commande;
 import othello.enumerations.Couleur;
 
-public class JouerIci extends Commande<JouerIciPourEnvoi, 
-                                       JouerIciRecue> 
+public class JouerIci extends Commande<JouerIciPourEnvoi, JouerIciRecue>
 
-                      implements JouerIciPourEnvoi, 
-                                 JouerIciRecue {
-	
+		implements JouerIciPourEnvoi, JouerIciRecue {
+
 	private int indiceColonne;
 	private int indiceLigne;
 	private Couleur couleurCourante;
@@ -17,21 +15,21 @@ public class JouerIci extends Commande<JouerIciPourEnvoi,
 	@Override
 	public void setIndiceColonne(int indiceColonne) {
 		J.appel(this);
-		
+
 		this.indiceColonne = indiceColonne;
 	}
-	
+
 	@Override
 	public void setIndiceLigne(int indiceLigne) {
 		J.appel(this);
 
 		this.indiceLigne = indiceLigne;
 	}
-	
+
 	@Override
 	public void setCouleurCourante(Couleur couleurCourante) {
 		J.appel(this);
-		
+
 		this.couleurCourante = couleurCourante;
 	}
 
@@ -52,7 +50,7 @@ public class JouerIci extends Commande<JouerIciPourEnvoi,
 	@Override
 	public Couleur getCouleurCourante() {
 		J.appel(this);
-		
+
 		return couleurCourante;
 	}
 }

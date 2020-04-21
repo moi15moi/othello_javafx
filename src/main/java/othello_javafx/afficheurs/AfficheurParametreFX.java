@@ -9,13 +9,5 @@ import othello_javafx.vues.VueParametreFX;
 
 public class AfficheurParametreFX extends AfficheurParametre<VueParametreFX> {
 
-	public void rafraichirAffichage(ParametreLectureSeule partieLectureSeule, VueParametre vue) {
-		J.appel(this);
-
-		Color couleurFondEcran = partieLectureSeule.getCouleurFondEcran();
-
-		vue.afficherCouleurFondEcran(couleurFondEcran);
-
-	}
 
 }
