@@ -19,10 +19,11 @@
 <?import othello_javafx.vues.composants.ConteneurGrille?>
 
 <VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal" fx:controller="othello_javafx.vues.VuePartieLocaleFX">
+	<VBox styleClass="conteneurPrincipal" VBox.vgrow="ALWAYS" fx:id="conteneurPrincipal">
 
               <ConteneurGrille fx:id="conteneurGrille" 
         			 	 styleClass="conteneurGrille" 
-        	             couleurBlanc="#4287f5"
+        	             couleurBlanc="#FFFFFF"
         	             couleurNoir="#000000"
         	             VBox.vgrow="ALWAYS"/>
 
@@ -37,4 +38,7 @@
 			<Text fx:id="nomJoueurDeux" styleClass="nomJoueur" text="%joueurDeux" />
 		</HBox>
 	</HBox>
+	
+		</VBox>
+
 </VBox>

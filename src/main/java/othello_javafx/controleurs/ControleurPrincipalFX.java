@@ -14,8 +14,6 @@ import commun_client.mvc.controleurs.RecepteurCommandeMVC;
 import commun_javafx.ChargeurDeVue;
 import commun_javafx.DialogueModal;
 import javafx.scene.Scene;
-import othello.modeles.Parametre.Parametre;
-import othello.modeles.Parametre.ParametreLectureSeule;
 import othello_client.controleurs.ControleurPrincipal;
 import othello_javafx.afficheurs.AfficheurParametreFX;
 import othello_javafx.afficheurs.AfficheurPartieLocaleFX;
@@ -26,6 +24,8 @@ import othello_javafx.commandes.ouvrir_parametres.OuvrirParametres;
 import othello_javafx.commandes.ouvrir_parametres.OuvrirParametresRecue;
 import othello_javafx.commandes.quitter.Quitter;
 import othello_javafx.commandes.quitter.QuitterRecue;
+import othello_javafx.modeles.Parametre.Parametre;
+import othello_javafx.modeles.Parametre.ParametreLectureSeule;
 import othello_javafx.modeles.PartieLocale.PartieLocale;
 import othello_javafx.vues.VueParametreFX;
 import othello_javafx.vues.VuePartieLocaleFX;
@@ -60,12 +60,7 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 				J.appel(this);
 
 				ouvrirParametres();
-				getParametre();
 
-				// this.setStyle("-fx-background-color:rgb(" + (int)
-				// (parametres.getCouleurFondEcran().getRed() * 255) + ","
-				// + (int) (parametres.getCouleurFondEcran().getGreen() * 255) + "," + (int)
-				// (parametres.getCouleurFondEcran().getBlue() * 255) + ");");
 			}
 		});
 

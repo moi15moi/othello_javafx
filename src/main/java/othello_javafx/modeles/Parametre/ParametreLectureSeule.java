@@ -1,4 +1,4 @@
-package othello.modeles.Parametre;
+package othello_javafx.modeles.Parametre;
 
 import javafx.scene.paint.Color;
 

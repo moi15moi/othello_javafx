@@ -8,6 +8,7 @@ import othello.modeles.Jeton.JetonLectureSeule;
 import othello_client.vues.VuePartieLocale;
 import othello_javafx.controleurs.ControleurPrincipalFX;
 import othello_javafx.modeles.PartieLocale.PartieLocaleLectureSeule;
+import javafx.scene.paint.Color;
 
 public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
 
@@ -30,12 +31,23 @@ public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
 		
 		vue.joueurCourant(partieLectureSeule.getCouleurCourante());
 		
-		vue.afficherNomJoueurUn(ControleurPrincipalFX.getParametre().getNomJoueurUn());
+		if (ControleurPrincipalFX.getParametre().getNomJoueurUn() != null) {
+			vue.afficherNomJoueurUn(ControleurPrincipalFX.getParametre().getNomJoueurUn());
+
+		}
+		if (ControleurPrincipalFX.getParametre().getNomJoueurDeux() != null) {
+			vue.afficherNomJoueurDeux(ControleurPrincipalFX.getParametre().getNomJoueurDeux());
+		}
+		
+		if (ControleurPrincipalFX.getParametre().getCouleurFondEcran() != null) {
+			vue.changerCouleurFond(ControleurPrincipalFX.getParametre().getCouleurFondEcran());
+		}
+	
+				
 	}
 	
 	private void rafraichirGrille(GrilleLectureSeule grille, VuePartieLocale vue) {
 		J.appel(this);
-
 		JetonLectureSeule[][] jetons = grille.getJetons();
 		boolean[][] coupPossible = grille.getCoupPossibles();
 		

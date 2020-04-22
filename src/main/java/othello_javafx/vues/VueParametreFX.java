@@ -17,6 +17,8 @@ import javafx.scene.paint.Color;
 import othello_client.vues.VueParametre;
 import othello_javafx.commandes.Cliquer.Cliquer;
 import othello_javafx.commandes.Cliquer.CliquerPourEnvoi;
+import othello_javafx.commandes.changer_nom_joueur_deux.ChangerNomJoueurDeux;
+import othello_javafx.commandes.changer_nom_joueur_deux.ChangerNomJoueurDeuxPourEnvoi;
 import othello_javafx.commandes.changer_nom_joueur_un.ChangerNomJoueurUn;
 import othello_javafx.commandes.changer_nom_joueur_un.ChangerNomJoueurUnPourEnvoi;
 import othello_javafx.vues.composants.ButtonPersonnalise;
@@ -34,11 +36,13 @@ public class VueParametreFX implements VueParametre, Initializable {
 	private VBox conteneurPrincipal;
 	
 	@FXML
-	private TextField texteJoueurUn;
+	private TextField texteJoueurUn, texteJoueurDeux;
 
 	private CliquerPourEnvoi cliquerPourEnvoi;
 	
 	private ChangerNomJoueurUnPourEnvoi changerNomJoueurUn;
+	private ChangerNomJoueurDeuxPourEnvoi changerNomJoueurDeux;
+
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -48,7 +52,8 @@ public class VueParametreFX implements VueParametre, Initializable {
 		DoitEtre.nonNul(conteneurPrincipal);
 		DoitEtre.nonNul(couleurFondEcran);
 		DoitEtre.nonNul(texteJoueurUn);
-
+		DoitEtre.nonNul(texteJoueurDeux);
+		
 	}
 
 	@Override
@@ -64,6 +69,8 @@ public class VueParametreFX implements VueParametre, Initializable {
 
 		cliquerPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(Cliquer.class);
 		changerNomJoueurUn = FabriqueCommande.obtenirCommandePourEnvoi(ChangerNomJoueurUn.class);
+		changerNomJoueurDeux = FabriqueCommande.obtenirCommandePourEnvoi(ChangerNomJoueurDeux.class);
+
 	}
 
 	@Override
@@ -91,6 +98,8 @@ public class VueParametreFX implements VueParametre, Initializable {
 				
 				changerNomJoueurUn.setNomJoueurUn(texteJoueurUn.getText());
 				changerNomJoueurUn.envoyerCommande();
+				changerNomJoueurDeux.setNomJoueurDeux(texteJoueurDeux.getText());
+				changerNomJoueurDeux.envoyerCommande();
 			}
 		});
 	}

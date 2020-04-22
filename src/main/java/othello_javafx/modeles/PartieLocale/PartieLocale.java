@@ -40,7 +40,7 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 	}
 
 	public void calculerChangementJeton(int indiceColonne, int indiceLigne) {
-
+		J.appel(this);
 		if (siPossibleJouerGauche(indiceColonne, indiceLigne)) {
 			int JetonMemeCouleur = siPossibleJouerGaucheTrouverJetonMemeCouleur(indiceColonne, indiceLigne);
 
@@ -177,7 +177,7 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 	}
 
 	public GrilleLectureSeule getGrille() {
-		// //J.appel(this);
+		J.appel(this);
 		return (GrilleLectureSeule) grille;
 	}
 

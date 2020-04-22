@@ -7,6 +7,7 @@ import javafx.application.Platform;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.ArcType;
 import othello.enumerations.Couleur;
 import othello_javafx.commandes.jouer_ici.JouerIci;
@@ -62,10 +63,10 @@ public class CaseAjustable extends CanvasAjustable {
 	public void afficherCoupPossible() {
 		J.appel(this);
 
-		pinceau.setFill(Color.WHEAT);
+		pinceau.setFill(Color.TRANSPARENT);
 		pinceau.setStroke(Color.BLACK);
 		dessinerCase();
-
+		
 	}
 
 	public void cacherJeton() {
@@ -98,14 +99,7 @@ public class CaseAjustable extends CanvasAjustable {
 
 		dessinerCase();
 
-		Platform.runLater(new Runnable() {
-			@Override
-			public void run() {
-				J.appel(this);
-				
-				CaseAjustable.this.requestLayout();
-			}
-		});
+
 	}
 
 	@Override
@@ -116,14 +110,6 @@ public class CaseAjustable extends CanvasAjustable {
 
 		dessinerCase();
 
-		Platform.runLater(new Runnable() {
-			@Override
-			public void run() {
-				J.appel(this);
-				
-				CaseAjustable.this.requestLayout();
-			}
-		});
 	}
 
 	private void initialiserPinceau() {

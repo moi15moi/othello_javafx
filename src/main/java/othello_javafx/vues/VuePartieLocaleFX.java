@@ -27,12 +27,17 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 
 	@FXML
 	private ConteneurGrille conteneurGrille;
+	
+	@FXML
+	private VBox conteneurPrincipal;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		J.appel(this);
 		
 		DoitEtre.nonNul(nomJoueurUn);
+		DoitEtre.nonNul(nomJoueurDeux);
+
 	}
 
 	@Override
@@ -66,7 +71,8 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	@Override
 	public void verifierCommandesPossibles() {
 		J.appel(this);
-
+		
+		//Inutile
 		// conteneurGrille.verifierCommandesPossibles();
 
 	}
@@ -113,6 +119,22 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		J.appel(this);
 		
 		this.nomJoueurUn.setText(nomJoueurUn);
+	}
+	
+	@Override
+	public void afficherNomJoueurDeux(String nomJoueurDeux) {
+		this.nomJoueurDeux.setText(nomJoueurDeux);
+		
+	}
+
+
+	@Override
+	public void changerCouleurFond(Color couleur) {
+		conteneurPrincipal.setStyle("-fx-background-color:rgb(" + (int) (couleur.getRed() * 255) + ","
+				+ (int) (couleur.getGreen() * 255) + "," + (int) (couleur.getBlue() * 255) + ");");
+
+		conteneurPrincipal.applyCss();
+		
 	}
 
 }

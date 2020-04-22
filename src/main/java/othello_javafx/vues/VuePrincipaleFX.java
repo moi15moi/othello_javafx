@@ -62,6 +62,8 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 				J.appel(this);
 				
 				ouvrirParametresPourEnvoi.envoyerCommande();
+				
+
 			}
 		});
 		
@@ -101,5 +103,6 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 		// TODO Auto-generated method stub
 		
 	}
+	
 
 }

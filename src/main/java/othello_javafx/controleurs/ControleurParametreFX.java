@@ -8,6 +8,8 @@ import othello_javafx.afficheurs.AfficheurParametreFX;
 import othello_javafx.vues.VueParametreFX;
 import othello_javafx.commandes.Cliquer.Cliquer;
 import othello_javafx.commandes.Cliquer.CliquerRecue;
+import othello_javafx.commandes.changer_nom_joueur_deux.ChangerNomJoueurDeux;
+import othello_javafx.commandes.changer_nom_joueur_deux.ChangerNomJoueurDeuxRecue;
 import othello_javafx.commandes.changer_nom_joueur_un.ChangerNomJoueurUn;
 import othello_javafx.commandes.changer_nom_joueur_un.ChangerNomJoueurUnRecue;
 
@@ -34,6 +36,16 @@ public class ControleurParametreFX extends ControleurParametre<VueParametreFX, A
 				J.appel(this);
 				
 				modele.changerNomJoueurUn(commande.getNomJoueurUn());
+			}
+		});
+		
+		installerRecepteurCommande(ChangerNomJoueurDeux.class, new RecepteurCommandeMVC<ChangerNomJoueurDeuxRecue>() {
+
+			@Override
+			public void executerCommandeMVC(ChangerNomJoueurDeuxRecue commande) {
+				J.appel(this);
+				
+				modele.changerNomJoueurDeux(commande.getNomJoueurDeux());
 			}
 		});
 

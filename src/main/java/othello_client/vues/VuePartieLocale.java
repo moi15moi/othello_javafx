@@ -2,6 +2,8 @@ package othello_client.vues;
 
 import commun_client.mvc.Vue;
 import othello.enumerations.Couleur;
+import javafx.scene.paint.Color;
+
 
 public interface VuePartieLocale extends Vue {
 
@@ -16,5 +18,9 @@ public interface VuePartieLocale extends Vue {
 	void joueurCourant(Couleur couleurCourante);
 	
 	void afficherNomJoueurUn(String nomJoueurUn);
+	
+	void afficherNomJoueurDeux(String nomJoueurDeux);
+
+	void changerCouleurFond(Color couleur);
 
 }

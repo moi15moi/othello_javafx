@@ -23,15 +23,6 @@
 
 		<VBox styleClass="conteneurParametres" VBox.vgrow="ALWAYS">
 
-
-			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">
-					<Text styleClass="conteneurParametreTexte" Text="%Couleurduplateaudejeu"/>
-				</HBox >	
-				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">
-					<TextField styleClass="combobox" fx:id="couleurPlateau"/>
-				</HBox >	
-			</HBox>
 			
 			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
 				<HBox styleClass="conteneurQuestion" HBox.hgrow="ALWAYS">
@@ -56,12 +47,12 @@
 					<Text styleClass="conteneurParametreTexte" Text="%NomJoueur02"/>
 				</HBox >
 				<HBox styleClass="conteneurReponse" HBox.hgrow="ALWAYS">		
-					<TextField styleClass="combobox" text="%joueurDeux"/>
+					<TextField fx:id="texteJoueurDeux" styleClass="combobox" text="%joueurDeux"/>
 				</HBox >
 			</HBox>
 
 			<HBox VBox.vgrow="ALWAYS" styleClass="conteneurParametre">
-				<ButtonPersonnalise fx:id="buttonPersonnalise" styleClass="conteneurParametreTexte" Text="%SauvegarderEtQuitter"/>
+				<ButtonPersonnalise fx:id="buttonPersonnalise" styleClass="conteneurParametreTexte" Text="%Sauvegarder"/>
 			</HBox>
 		</VBox>
 
