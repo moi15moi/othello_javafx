@@ -581,14 +581,6 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 	public boolean siPossibleJouerIci(int indiceColonne, int indiceLigne) {
 		J.appel(this);
 		
-		for (int i = 0; i < 8; i++) {
-			for (int j = 0; j < 8; j++) {
-				System.out.println("Colonne: "+ i);
-				System.out.println("Ligne: "+ j);
-				System.out.println(grille.getCoupPossibles()[i][j]);
-
-			}
-		}
 		return grille.getCoupPossibles()[indiceColonne][indiceLigne];
 
 	}
