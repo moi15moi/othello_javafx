@@ -72,6 +72,9 @@ public class CaseAjustable extends CanvasAjustable {
 	public void cacherJeton() {
 		J.appel(this);
 
+		pinceau.setFill(Color.TRANSPARENT);
+		pinceau.setStroke(Color.TRANSPARENT);
+
 		viderDessin();
 
 	}
