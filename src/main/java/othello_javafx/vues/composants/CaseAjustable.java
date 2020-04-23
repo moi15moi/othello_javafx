@@ -207,15 +207,7 @@ public class CaseAjustable extends CanvasAjustable {
 	public void verifierCommandesPossibles() {
 		J.appel(this);
 
-		jouerIciPourEnvoi.setIndiceColonne(indiceColonne);
-		jouerIciPourEnvoi.setIndiceLigne(indiceLigne);
-		setActif(jouerIciPourEnvoi.siCommandePossible());
-	}
-
-	public void setActif(boolean siPossibleJouerIci) {
-		J.appel(this);
-
-		//this.setDisable(!siPossibleJouerIci);
 
 	}
+
 }
