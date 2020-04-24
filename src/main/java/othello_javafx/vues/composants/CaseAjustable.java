@@ -74,7 +74,7 @@ public class CaseAjustable extends CanvasAjustable {
 
 		pinceau.setFill(Color.TRANSPARENT);
 		pinceau.setStroke(Color.TRANSPARENT);
-
+		
 		viderDessin();
 
 	}
