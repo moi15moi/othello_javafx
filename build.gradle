@@ -33,6 +33,7 @@ dependencies {
     compile project(':commun')
     compile project(':commun_client')
     compile project(':commun_javafx')
+    compile project(':commun_serveur')
 
 }
 
