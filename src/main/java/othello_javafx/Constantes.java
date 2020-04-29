@@ -23,4 +23,7 @@ public class Constantes {
 
 	public static final int LARGEUR_GRILLE = 8;
 	public static final int HAUTEUR_GRILLE = 8;
+	
+	public static final int PORT = 8765;
+	public static final String ADRESSE_SERVEUR = String.format("ws://localhost:%s", PORT);
 }
