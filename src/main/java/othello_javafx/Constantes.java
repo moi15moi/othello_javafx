@@ -12,6 +12,11 @@ public class Constantes {
 
 	public static final String CHEMIN_PARTIE_LOCALE_FXML = "/fxml/partieLocale.xml";
 	public static final String CHEMIN_PARTIE_LOCALE_CSS = "/css/partieLocale.css";
+	
+	public static final String CHEMIN_PARTIE_RESEAU_FXML = "/fxml/partieReseau.xml";
+	public static final String CHEMIN_PARTIE_RESEAU_CSS = "/css/partieReseau.css";
+
+
 
 	public static final int LARGEUR_SCENE = 220;
 	public static final int HAUTEUR_SCENE = 380;
@@ -23,4 +28,7 @@ public class Constantes {
 
 	public static final int LARGEUR_GRILLE = 8;
 	public static final int HAUTEUR_GRILLE = 8;
+	
+	public static final int PORT = 8765;
+	public static final String ADRESSE_SERVEUR = String.format("ws://localhost:%s", PORT);
 }

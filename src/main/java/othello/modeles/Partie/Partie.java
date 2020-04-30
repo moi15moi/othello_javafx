@@ -1,21 +1,24 @@
-package othello_javafx.modeles.PartieLocale;
+package othello.modeles.Partie;
 
 import commun.debogage.J;
 import commun.modeles.Modele;
 import javafx.scene.paint.Color;
 import othello.enumerations.Couleur;
-import othello.modeles.Grille.Grille;
-import othello.modeles.Grille.GrilleLectureSeule;
-import static othello_javafx.Constantes.*;
+import othello.modeles.Partie.Grille;
+import othello.modeles.Partie.GrilleLectureSeule;
 
-public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements PartieLocaleLectureSeule {
+import static othello_javafx.Constantes.*;
+	
+	public class      Partie<PLS extends PartieLectureSeule> 
+    extends    Modele<PLS>
+    implements PartieLectureSeule {
 
 	private Couleur couleurCourante = Couleur.NOIR;
 
 	private Grille grille;
 	
 
-	public PartieLocale() {
+	public Partie() {
 		J.appel(this);
 
 		grille = new Grille();

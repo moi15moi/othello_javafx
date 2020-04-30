@@ -10,9 +10,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.ArcType;
 import othello.enumerations.Couleur;
+import othello.modeles.Partie.Grille;
 import othello_javafx.commandes.jouer_ici.JouerIci;
 import othello_javafx.commandes.jouer_ici.JouerIciPourEnvoi;
-import othello.modeles.Grille.Grille;
 
 public class CaseAjustable extends CanvasAjustable {
 

@@ -1,0 +1,42 @@
+.Menu {
+	-fx-border-style: solid;
+	-fx-border-width: 10px;
+	-fx-border-color: blue;
+
+}
+
+.conteneurGrille {
+	-fx-alignment: center;
+	/*-fx-padding: 20px;*/
+}
+
+.conteneurLigne {
+    -fx-border-width: 2px;
+}
+
+.conteneurCase {
+	-fx-border-style: solid solid solid solid;
+	-fx-alignment: center;
+	-fx-background-color: green;
+	/*-fx-border-width: 30px;*/
+	-fx-min-width: 30px;
+	-fx-min-height: 30px;
+
+}
+
+.conteneurNomsJoueurs {
+	-fx-alignment: center;
+    -fx-min-width: 180px;
+    -fx-min-height: 60px;
+    -fx-border-style: dashed;
+    -fx-background-color: lightgreen;
+}
+
+.conteneurNomJoueur {
+    -fx-alignment:center;
+    -fx-min-width: 90px;
+    -fx-border-style: dashed;
+    -fx-border-width: 2px;
+    -fx-background-color: lightgreen;
+}
+

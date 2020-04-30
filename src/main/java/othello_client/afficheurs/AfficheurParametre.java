@@ -1,10 +1,10 @@
 package othello_client.afficheurs;
 
 import javafx.scene.paint.Color;
+import othello.modeles.Parametre.ParametreLectureSeule;
 import commun.debogage.J;
 import commun_client.mvc.Afficheur;
 import othello_client.vues.VueParametre;
-import othello_javafx.modeles.Parametre.ParametreLectureSeule;
 
 
 public abstract class AfficheurParametre <V extends VueParametre> extends Afficheur<ParametreLectureSeule, V> {

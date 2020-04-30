@@ -1,4 +1,4 @@
-rootProject.name = 'othello_javafx_prof'
+rootProject.name = 'othello_javafx'
 
 include ':commun'
 project(':commun').projectDir = file('../tutoriels_java/commun')
@@ -9,3 +9,6 @@ project(':commun_client').projectDir = file('../tutoriels_java/commun_client')
 
 include ':commun_javafx'
 project(':commun_javafx').projectDir = file('../tutoriels_java/commun_javafx')
+
+include ':commun_serveur'
+project(':commun_serveur').projectDir = file('../tutoriels_java/commun_serveur')

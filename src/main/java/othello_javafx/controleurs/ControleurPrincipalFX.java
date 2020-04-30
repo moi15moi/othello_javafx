@@ -14,22 +14,27 @@ import commun_client.mvc.controleurs.RecepteurCommandeMVC;
 import commun_javafx.ChargeurDeVue;
 import commun_javafx.DialogueModal;
 import javafx.scene.Scene;
+import othello.modeles.Parametre.Parametre;
+import othello.modeles.Parametre.ParametreLectureSeule;
+import othello.modeles.PartieLocale.PartieLocale;
+import othello.modeles.PartieReseau.PartieReseau;
 import othello_client.controleurs.ControleurPrincipal;
 import othello_javafx.afficheurs.AfficheurParametreFX;
 import othello_javafx.afficheurs.AfficheurPartieLocaleFX;
+import othello_javafx.afficheurs.AfficheurPartieReseauFX;
 import othello_javafx.commandes.jouer_ici.JouerIciPourEnvoi;
-import othello_javafx.commandes.nouvelle_partie.NouvellePartie;
-import othello_javafx.commandes.nouvelle_partie.NouvellePartieRecue;
+import othello_javafx.commandes.nouvelle_partie.NouvellePartieLocale;
+import othello_javafx.commandes.nouvelle_partie.NouvellePartieLocaleRecue;
 import othello_javafx.commandes.ouvrir_parametres.OuvrirParametres;
 import othello_javafx.commandes.ouvrir_parametres.OuvrirParametresRecue;
 import othello_javafx.commandes.quitter.Quitter;
 import othello_javafx.commandes.quitter.QuitterRecue;
-import othello_javafx.modeles.Parametre.Parametre;
-import othello_javafx.modeles.Parametre.ParametreLectureSeule;
-import othello_javafx.modeles.PartieLocale.PartieLocale;
 import othello_javafx.vues.VueParametreFX;
-import othello_javafx.vues.VuePartieLocaleFX;
+import othello_javafx.vues.VuePartieFX;
+import othello_javafx.vues.VuePartieReseauFX;
 import othello_javafx.vues.VuePrincipaleFX;
+import othello_client.commandes.nouvelle_partie_reseau.NouvellePartieReseau;
+import othello_client.commandes.nouvelle_partie_reseau.NouvellePartieReseauRecue;
 
 @SuppressWarnings("rawtypes")
 public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> {
@@ -64,12 +69,21 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 			}
 		});
 
-		installerRecepteurCommande(NouvellePartie.class, new RecepteurCommandeMVC<NouvellePartieRecue>() {
+		installerRecepteurCommande(NouvellePartieLocale.class, new RecepteurCommandeMVC<NouvellePartieLocaleRecue>() {
 			@Override
-			public void executerCommandeMVC(NouvellePartieRecue commande) {
+			public void executerCommandeMVC(NouvellePartieLocaleRecue commande) {
 				J.appel(this);
 
 				nouvellePartieLocale();
+			}
+		});
+		
+		installerRecepteurCommande(NouvellePartieReseau.class, new RecepteurCommandeMVC<NouvellePartieReseauRecue>() {
+			@Override
+			public void executerCommandeMVC(NouvellePartieReseauRecue commande) {
+				J.appel(this);
+				
+				nouvellePartieReseau();
 			}
 		});
 	}
@@ -77,13 +91,26 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 	private void nouvellePartieLocale() {
 		J.appel(this);
 
-		VuePartieLocaleFX vuePartieLocale = vue.creerVuePartieLocale();
+		VuePartieFX vuePartieLocale = vue.creerVuePartieLocale();
 
 		PartieLocale partie = new PartieLocale();
 
 		AfficheurPartieLocaleFX afficheur = new AfficheurPartieLocaleFX();
 
 		FabriqueControleur.creerControleur(ControleurPartieLocaleFX.class, partie, vuePartieLocale, afficheur);
+	}
+	
+	private void nouvellePartieReseau() {
+		J.appel(this);
+		
+		VuePartieReseauFX vuePartieReseau = vue.creerVuePartieReseau();
+		
+		PartieReseau partie = new PartieReseau();
+		
+		AfficheurPartieReseauFX afficheur = new AfficheurPartieReseauFX();
+		
+		FabriqueControleur.creerControleur(ControleurPartieReseauFX.class, partie, vuePartieReseau, afficheur);
+		
 	}
 
 	private void ouvrirParametres() {
@@ -122,6 +149,18 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 	protected void demarrer() {
 		J.appel(this);
 
+	}
+
+	@Override
+	protected void obtenirMessagesPourEnvoi() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void installerReceptionMessages() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

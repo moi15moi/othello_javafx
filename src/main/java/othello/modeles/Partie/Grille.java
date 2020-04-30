@@ -1,10 +1,8 @@
-package othello.modeles.Grille;
+package othello.modeles.Partie;
 
 import static othello_javafx.Constantes.*;
 import commun.debogage.J;
 import othello.enumerations.Couleur;
-import othello.modeles.Jeton.Jeton;
-import othello.modeles.Jeton.JetonLectureSeule;
 
 public class Grille implements GrilleLectureSeule {
 

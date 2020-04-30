@@ -1,9 +1,8 @@
-package othello.modeles.Grille;
+package othello.modeles.Partie;
 
 import java.util.List;
 
 import javafx.scene.paint.Color;
-import othello.modeles.Jeton.JetonLectureSeule;
 
 public interface GrilleLectureSeule {
 	

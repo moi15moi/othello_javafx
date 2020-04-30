@@ -5,7 +5,7 @@ import othello.enumerations.Couleur;
 import javafx.scene.paint.Color;
 
 
-public interface VuePartieLocale extends VuePartie {
+public interface VuePartie extends Vue {
 
 	void creerGrille();
 

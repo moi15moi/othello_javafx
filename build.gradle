@@ -33,6 +33,11 @@ dependencies {
     compile project(':commun')
     compile project(':commun_client')
     compile project(':commun_javafx')
+	compile project(':commun_serveur')
+
+    // Websocket
+    // https://github.com/TooTallNate/Java-WebSocket
+    implementation 'org.java-websocket:Java-WebSocket:1.4.0'
 
 }
 
@@ -48,4 +53,8 @@ task(joueur01En, dependsOn: 'classes', type: JavaExec) {
    jvmArgs('-Duser.language=en')
 }
 
+task(serveur, dependsOn: 'classes', type: JavaExec) {
+main = 'othello_serveur.Principal'
+classpath = sourceSets.main.runtimeClasspath
+}
 

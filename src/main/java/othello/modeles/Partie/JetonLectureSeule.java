@@ -1,4 +1,4 @@
-package othello.modeles.Jeton;
+package othello.modeles.Partie;
 
 import othello.enumerations.Couleur;
 

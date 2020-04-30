@@ -1,4 +1,4 @@
-package othello.modeles.Jeton;
+package othello.modeles.Partie;
 
 import commun.debogage.J;
 import othello.enumerations.Couleur;

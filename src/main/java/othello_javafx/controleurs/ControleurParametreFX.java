@@ -50,4 +50,16 @@ public class ControleurParametreFX extends ControleurParametre<VueParametreFX, A
 		});
 
 	}
+
+	@Override
+	protected void obtenirMessagesPourEnvoi() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void installerReceptionMessages() {
+		// TODO Auto-generated method stub
+		
+	}
 }

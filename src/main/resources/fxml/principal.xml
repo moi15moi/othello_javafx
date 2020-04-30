@@ -13,20 +13,17 @@
 				<menus>
 					<Menu styleClass="menu" text="%partieLocale">
 						<items>
-							<MenuItem fx:id="menuNouvellePartie" styleClass="menu_item" text="%nouvellePartie"/>
+							<MenuItem fx:id="menuNouvellePartieLocale" styleClass="menu_item" text="%nouvellePartie"/>
 							<MenuItem fx:id="menuParametres" styleClass="menu_item" text="%parametres"/>
 							<SeparatorMenuItem/>
 							<MenuItem fx:id="menuQuitter" styleClass="menu_item" text="%quitter"/>
 						</items>
 					</Menu>
-					<Menu styleClass="menu" text="%jouerEnLigne">
-						<items>
-							<MenuItem fx:id="creerUnePartie" styleClass="menu_item" text="%creerUnePartie"/>
-							<MenuItem fx:id="joindreUnePartie" styleClass="menu_item" text="%joindreUnePartie"/>
-							<SeparatorMenuItem/>
-							<MenuItem fx:id="quittezUnePartie" styleClass="menu_item" text="%quittezUnePartie"/>
-						</items>
-					</Menu>
+                <Menu styleClass="menu" text="%partieReseau">
+                    <items>
+                    <MenuItem fx:id="menuNouvellePartieReseau" styleClass="menu_item" text="%nouvellePartie"/>
+                    </items>
+                </Menu>
 				</menus>
 			</MenuBar>
 		</top>

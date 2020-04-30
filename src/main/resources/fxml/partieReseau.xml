@@ -18,7 +18,7 @@
 <?import othello_javafx.vues.composants.ConteneurEntetes?>
 <?import othello_javafx.vues.composants.ConteneurGrille?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal" fx:controller="othello_javafx.vues.VuePartieLocaleFX">
+<VBox xmlns:fx="http://javafx.com/fxml" styleClass="conteneurPrincipal" fx:controller="othello_javafx.vues.VuePartieReseauFX">
 	<VBox styleClass="conteneurPrincipal" VBox.vgrow="ALWAYS" fx:id="conteneurPrincipal">
 
               <ConteneurGrille fx:id="conteneurGrille" 
@@ -38,11 +38,9 @@
 			<Text fx:id="nomJoueurDeux" styleClass="nomJoueur" text="%joueurDeux" />
 		</HBox>
 	</HBox>
-	
-	    <HBox>
-            <Text text="%partieLocale"/>
+	<HBox>
+            <Text text="%partieReseau"/>
     </HBox>
-	
 		</VBox>
 
 </VBox>
