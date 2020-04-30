@@ -1,7 +1,6 @@
 package othello_serveur;
 
 import commun.debogage.J;
-import commun_serveur.ServeurWebSocket;
 
 public class ServeurOthello extends ServeurWebSocket {
 
