@@ -20,7 +20,7 @@ public abstract class ControleurPartieLocale<V extends VuePartieLocale, A extend
 	protected void demarrer() {
 		J.appel(this);
 
-		// Placer les jetons au début
+		// Placer les jetons au dÃ©but
 		Grille grille = (Grille) modele.getGrille();
 		grille.ajouterJeton(4, 3, Couleur.NOIR);
 		grille.ajouterJeton(3, 3, Couleur.BLANC);

@@ -100,7 +100,7 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 
 		FabriqueControleur.creerControleur(ControleurParametreFX.class, parametres, vue, afficheur);
 
-		// À ajouter dans le futur fichier parametre
+		// ï¿½ ajouter dans le futur fichier parametre
 
 		Scene scene = chargeur.nouvelleScene(600, 400);
 
@@ -122,6 +122,18 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 	protected void demarrer() {
 		J.appel(this);
 
+	}
+
+	@Override
+	protected void obtenirMessagesPourEnvoi() {
+		J.appel(this);
+		
+	}
+
+	@Override
+	protected void installerReceptionMessages() {
+		J.appel(this);
+		
 	}
 
 }

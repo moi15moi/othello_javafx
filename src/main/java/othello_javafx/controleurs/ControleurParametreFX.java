@@ -50,4 +50,16 @@ public class ControleurParametreFX extends ControleurParametre<VueParametreFX, A
 		});
 
 	}
+
+	@Override
+	protected void obtenirMessagesPourEnvoi() {
+		J.appel(this);
+		
+	}
+
+	@Override
+	protected void installerReceptionMessages() {
+		J.appel(this);
+		
+	}
 }
