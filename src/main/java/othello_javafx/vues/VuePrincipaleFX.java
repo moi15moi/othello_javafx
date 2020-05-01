@@ -2,13 +2,16 @@ package othello_javafx.vues;
 
 import static othello_javafx.Constantes.*;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
+import commun.systeme.Systeme;
 import commun_client.commandes.FabriqueCommande;
 import commun_javafx.ChargeurDeVue;
+import commun_javafx.DialogueModal;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,11 +28,13 @@ import othello_javafx.commandes.ouvrir_parametres.OuvrirParametres;
 import othello_javafx.commandes.ouvrir_parametres.OuvrirParametresPourEnvoi;
 import othello_javafx.commandes.quitter.Quitter;
 import othello_javafx.commandes.quitter.QuitterPourEnvoi;
+import othello_client.commandes.sauvegarder_partie.SauvegarderPartie;
+import othello_client.commandes.sauvegarder_partie.SauvegarderPartiePourEnvoi;
 
 public class VuePrincipaleFX implements VuePrincipale, Initializable {
 	
 	@FXML
-	MenuItem menuNouvellePartieLocale, menuNouvellePartieReseau, menuParametres, menuQuitter;
+	MenuItem menuNouvellePartieLocale, menuNouvellePartieReseau, menuParametres, menuQuitter, menuSauvegarderPartieLocale;
 	
 	@FXML
 	VBox conteneurPartie;
@@ -38,6 +43,8 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 	OuvrirParametresPourEnvoi ouvrirParametresPourEnvoi;
 	NouvellePartieLocalePourEnvoi nouvellePartieLocalePourEnvoi;
 	NouvellePartieReseauPourEnvoi nouvellePartieReseauPourEnvoi;
+	SauvegarderPartiePourEnvoi sauvegarderPartiePourEnvoi;
+
 
 	@Override
 	public void obtenirCommandesPourEnvoi() {
@@ -47,6 +54,7 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 		ouvrirParametresPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(OuvrirParametres.class);
 		nouvellePartieLocalePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(NouvellePartieLocale.class);
 		nouvellePartieReseauPourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(NouvellePartieReseau.class);
+		sauvegarderPartiePourEnvoi = FabriqueCommande.obtenirCommandePourEnvoi(SauvegarderPartie.class);
 
 	}
 
@@ -89,6 +97,24 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 				nouvellePartieReseauPourEnvoi.envoyerCommande();
 			}
 		});
+		
+		menuSauvegarderPartieLocale.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				J.appel(this);
+				
+				File fichierChoisi = DialogueModal.ouvrirDialogueFichiers();
+
+				if(fichierChoisi != null) {
+
+					String cheminDansHome = Systeme.cheminDansHome(fichierChoisi);
+
+					sauvegarderPartiePourEnvoi.setCheminDansHome(cheminDansHome);
+					sauvegarderPartiePourEnvoi.envoyerCommande();
+				}
+			}
+		});
 	}
 
 	@Override
@@ -98,6 +124,8 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 		DoitEtre.nonNul(menuNouvellePartieReseau);
 		DoitEtre.nonNul(menuParametres);
 		DoitEtre.nonNul(menuQuitter);
+		DoitEtre.nonNul(menuSauvegarderPartieLocale);
+
 	}
 
 	public VuePartieLocaleFX creerVuePartieLocale() {
@@ -130,6 +158,23 @@ public class VuePrincipaleFX implements VuePrincipale, Initializable {
 		conteneurPartie.getChildren().add(parent);
 		
 		return vuePartieReseau;
+	}
+	
+	public VueSauvegardesFX creerVueSauvegardes() {
+		J.appel(this);
+
+		ChargeurDeVue<VueSauvegardesFX> chargeur = new ChargeurDeVue<VueSauvegardesFX>(CHEMIN_VUE_SAUVEGARDES_FXML,
+						CHEMIN_CHAINES,
+						CHEMIN_VUE_SAUVEGARDES_CSS);
+		
+		VueSauvegardesFX vueSauvegardes = chargeur.getVue();
+		
+		Parent parent = chargeur.getParent();
+		
+		conteneurPartie.getChildren().clear();
+		conteneurPartie.getChildren().add(parent);
+		
+		return vueSauvegardes;
 	}
 
 

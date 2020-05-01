@@ -15,6 +15,9 @@ public class Constantes {
 	
 	public static final String CHEMIN_PARTIE_RESEAU_FXML = "/fxml/partieReseau.xml";
 	public static final String CHEMIN_PARTIE_RESEAU_CSS = "/css/partieReseau.css";
+	
+	public static final String CHEMIN_VUE_SAUVEGARDES_FXML = "/fxml/sauvegardes.xml";
+	public static final String CHEMIN_VUE_SAUVEGARDES_CSS = "/css/sauvegardes.css";
 
 
 

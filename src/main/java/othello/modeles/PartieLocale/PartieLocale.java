@@ -14,5 +14,12 @@ implements PartieLocaleLectureSeule {
 		J.appel(this);
 		
 	}
+	
+	public boolean siInitialisee() {
+		J.appel(this);
+
+		return getGrille() != null && getCouleurCourante() != null;
+
+	}
 
 }
