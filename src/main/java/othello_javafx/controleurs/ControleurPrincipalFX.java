@@ -127,6 +127,7 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 		J.appel(this);
 
 		partieLocale = new PartieLocale();
+		partieLocale.initialiser();
 		
 		instancierMVCPartieLocale();
 		
@@ -159,7 +160,7 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 
 		FabriqueControleur.creerControleur(ControleurParametreFX.class, parametres, vue, afficheur);
 
-		// À ajouter dans le futur fichier parametre
+		// ï¿½ ajouter dans le futur fichier parametre
 
 		Scene scene = chargeur.nouvelleScene(600, 400);
 
@@ -190,7 +191,7 @@ public class ControleurPrincipalFX extends ControleurPrincipal<VuePrincipaleFX> 
 
 			} catch (IOException e) {
 				
-				Erreur.nonFatale(String.format("Impossible d'écrire le fichier %s", fichierDansHome.getPath()), e);
+				Erreur.nonFatale(String.format("Impossible d'ï¿½crire le fichier %s", fichierDansHome.getPath()), e);
 
 			}
 		}

@@ -13,15 +13,21 @@ import static othello_javafx.Constantes.*;
     extends    Modele<PLS>
     implements PartieLectureSeule {
 
-	private Couleur couleurCourante = Couleur.NOIR;
-
+	private Couleur couleurCourante;
 	private Grille grille;
 	
 
 	public Partie() {
 		J.appel(this);
 
+	}
+	
+	public void initialiser() {
+		J.appel(this);
+
 		grille = new Grille();
+	    couleurCourante = Couleur.NOIR;
+		
 	}
 
 	public void jouerIci(int indiceColonne, int indiceLigne) {
