@@ -1,0 +1,28 @@
+Barème:
+
+* 10/10: dépasse les attentes
+* 8/10:  rencontre les attentes
+* 6/10:  compétence en voie d'être atteinte
+* 4/10:  ne démontre pas la compétence
+* 0/10:  pas fait
+
+Correction:
+
+ 10/10) Document expliquant les règles du jeu
+
+		
+ 18/20) Fenêtre principale / page accueil
+    * on doit pouvoir accéder aux paramètres
+    * on doit pouvoir démarrer un nouvelle partie
+
+ 18/30) MVC *Paramètres*
+	* vous **devez** utiliser les classes MVC du prof
+    * au moins une action usager:
+    	* l'action modifie le modèle
+    	* l'affichage est rafraîchit
+
+ 40/40) MVC *Partie locale* 
+	* vous **devez** utiliser les classes MVC du prof
+    * au moins une action usager:
+    	* l'action modifie le modèle
+    	* l'affichage est rafraîchit
