@@ -109,10 +109,13 @@ public class ConteneurGrille extends VBox {
 
 	public void afficherCoupPossible(int indiceColonne, int indiceLigne) {
 		J.appel(this);
+		
+		if(siIndiceRangeeValide(indiceLigne)) {
+			
+			ConteneurLigne conteneurLigne = getConteneurLigne(indiceColonne);
+			conteneurLigne.afficherCoupPossible(indiceLigne);
 
-		ConteneurLigne conteneurLigne = getConteneurLigne(indiceColonne);
-		conteneurLigne.afficherCoupPossible(indiceLigne);
-
+		}
 	}
 
 	public void cacherJeton(int indiceColonne, int indiceLigne) {
