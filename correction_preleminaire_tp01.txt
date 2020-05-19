@@ -15,7 +15,7 @@ Correction:
     * on doit pouvoir accéder aux paramètres
     * on doit pouvoir démarrer un nouvelle partie
 
- 18/30) MVC *Paramètres*
+ 26/30) MVC *Paramètres*
 	* vous **devez** utiliser les classes MVC du prof
     * au moins une action usager:
     	* l'action modifie le modèle
