@@ -37,6 +37,7 @@ public class VuePartieFX implements VuePartie, Initializable {
 		
 		DoitEtre.nonNul(nomJoueurUn);
 		DoitEtre.nonNul(nomJoueurDeux);
+		creerGrille();
 
 	}
 

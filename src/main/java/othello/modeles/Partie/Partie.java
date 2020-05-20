@@ -19,7 +19,6 @@ import static othello_javafx.Constantes.*;
 
 	public Partie() {
 		J.appel(this);
-
 	}
 	
 	public void initialiser() {

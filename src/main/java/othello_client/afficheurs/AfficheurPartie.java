@@ -26,7 +26,7 @@ public abstract class AfficheurPartie<PLS extends PartieLectureSeule, V extends 
 		J.appel(this);
 
 		GrilleLectureSeule grille = partieLectureSeule.getGrille();
-
+		
 		rafraichirGrille(grille, vue);
 
 		vue.joueurCourant(partieLectureSeule.getCouleurCourante());
